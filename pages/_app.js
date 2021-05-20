@@ -13,7 +13,7 @@ function MyOPApp({ Component, pageProps }) {
           sizes="48x48"
           href="favicon/favicon.ico"
         />
-        <title>My Open Politica App</title>
+        <title>Proclama ciudadana 2021</title>
       </Head>
       <GlobalStyle />
       <ThemeProvider theme={theme}>

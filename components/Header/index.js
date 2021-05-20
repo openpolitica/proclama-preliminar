@@ -4,10 +4,7 @@ import Link from 'next/link';
 const Header = () => {
   return (
     <header>
-      <Link href="/">
-        <LogoImg src="/images/icons/logo.svg" />
-      </Link>
-      <Title>Proyecto de Open politica</Title>
+      <Title>Proclama ciudadana</Title>
     </header>
   );
 };
