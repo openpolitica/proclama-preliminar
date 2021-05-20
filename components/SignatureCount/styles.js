@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SignatureBox = styled('p')`
+export const SignatureCount = styled('p')`
   border-bottom: 1px solid #d9d9d9;
   color: #4e4a49;
   font-size: 2.5rem;
