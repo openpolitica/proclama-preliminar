@@ -2,9 +2,7 @@ import { SignatureBox } from './styles';
 
 const SignatureCount = props => {
   return (
-    <ul>
-      <SignatureBox>{props.count} personas</SignatureBox>
-    </ul>
+    <Styled.SignatureCount>{props.count} personas</Styled.SignatureCount>
   );
 };
 
