@@ -13,6 +13,10 @@ function MyOPApp({ Component, pageProps }) {
           sizes="48x48"
           href="favicon/favicon.ico"
         />
+        <link
+          href="https://api.fontshare.com/css?f[]=neco@400,700&display=swap"
+          rel="stylesheet"
+        />
         <title>Proclama ciudadana 2021</title>
       </Head>
       <GlobalStyle />
