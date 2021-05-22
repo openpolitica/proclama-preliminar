@@ -40,7 +40,7 @@ export const Subtitle = styled('p')`
   line-height: 1.75rem;
   margin: 0;
   margin-bottom: 3.875rem;
-  margin-top: 24px;
+  margin-top: 1.5rem;
   text-align: center;
 `;
 
@@ -119,6 +119,7 @@ export const LogoText = styled('p')`
   line-height: 1.625rem;
   margin: 0;
 `;
+
 export const List = styled(Masonry)`
   display: flex;
   margin: -1.25rem 0 0 -1.25rem;
