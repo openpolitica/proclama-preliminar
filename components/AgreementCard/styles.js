@@ -16,6 +16,7 @@ const Card = styled('div')`
         : 'linear-gradient(180deg,rgba(255, 255, 255, 0) 50%,#f2f2f2 80%)'};
     bottom: 0;
     content: '';
+    display: ${({ expanded }) => (expanded ? 'none' : 'block')};
     left: 0;
     position: absolute;
     right: 0;
