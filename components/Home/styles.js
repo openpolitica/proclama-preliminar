@@ -1,6 +1,11 @@
 import styled from 'styled-components';
+import Masonry from 'react-masonry-css';
 
-export const Container = styled('div')``;
+export const Container = styled('div')`
+  @media (max-width: 58.75rem) {
+    padding: 0 1.5rem;
+  }
+`;
 
 export const Header = styled('h1')`
   color: #4e4a49;
@@ -34,6 +39,7 @@ export const Subtitle = styled('p')`
   font-size: 1.25rem;
   line-height: 1.75rem;
   margin: 0;
+  margin-bottom: 3.875rem;
   margin-top: 24px;
   text-align: center;
 `;
@@ -112,4 +118,9 @@ export const LogoText = styled('p')`
   font-size: 1.75rem;
   line-height: 1.625rem;
   margin: 0;
+`;
+export const List = styled(Masonry)`
+  display: flex;
+  margin: -1.25rem 0 0 -1.25rem;
+  width: calc(100% + 1.25rem);
 `;
