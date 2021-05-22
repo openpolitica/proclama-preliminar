@@ -73,7 +73,7 @@ const optimizeFile = async function (filepath) {
     //     }
     // }
 
-    fs.writeFile(filepath, result.data, function (err) {
+    fs.writeFile(filepath, result.data + '\n', function (err) {
       if (err) return console.log(err);
     });
   });
