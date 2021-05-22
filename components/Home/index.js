@@ -2,6 +2,8 @@ import * as Styled from './styles';
 import Link from 'next/link';
 import Image from 'next/image';
 import Footer from 'components/Footer';
+import AgreementCard from 'components/AgreementCard';
+import { agreements } from 'data/agreements';
 
 const LogoList = () => (
   <Styled.Boxlogo>
@@ -44,6 +46,16 @@ const Home = () => {
             sabemos también lo que es recuperarla.
           </Styled.Emphasis>
         </Styled.Subtitle>
+        <Styled.List
+          breakpointCols={{
+            default: 3,
+            900: 2,
+            600: 1,
+          }}>
+          {agreements.map(({ ...item }) => (
+            <AgreementCard key={item.id} {...item} />
+          ))}
+        </Styled.List>
       </Styled.Main>
       <Styled.Signatures>
         <Styled.SignatureTitle>Firman</Styled.SignatureTitle>
