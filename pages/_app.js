@@ -10,8 +10,8 @@ function MyOPApp({ Component, pageProps }) {
         <link
           rel="icon"
           type="image/png"
-          sizes="48x48"
-          href="favicon/favicon.ico"
+          sizes="128x128"
+          href="favicon/favicon.svg"
         />
         <link
           href="https://api.fontshare.com/css?f[]=neco@400,700&display=swap"
