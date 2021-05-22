@@ -63,7 +63,7 @@ const Home = props => {
         <SignatureCount count={props.signatures} />
         <Styled.Text>
           Firma tú también en:{' '}
-          <Styled.TextLink href="https://www.change.org/">
+          <Styled.TextLink href="https://www.change.org/p/actransparencia-keikofujimori-pedrocastillote-canaln-que-los-candidatos-pedro-castillo-y-keiko-fujimori-firmen-la-siguiente-proclama-ciudadana">
             change.org
           </Styled.TextLink>
         </Styled.Text>
@@ -74,8 +74,8 @@ const Home = props => {
             height="24"
             alt="icono de descarga"
           />
-          <Styled.TextLink href="">
-            Descarga el documento completo
+          <Styled.TextLink href="https://drive.google.com/drive/folders/1hFH0XfkHCktmDQkuuRXICPa_FgcsGaA_">
+            Descarga y comparte los acuerdos
           </Styled.TextLink>
         </Styled.Download>
       </Styled.Signatures>
