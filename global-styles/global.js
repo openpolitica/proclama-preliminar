@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: white;
     color: black;
     font-size: 16px;
-    font-family: sans-serif;
+    font-family: 'Neco', sans-serif;
     margin: 0;
   }
   * {
