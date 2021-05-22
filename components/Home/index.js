@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Footer from 'components/Footer';
 import AgreementCard from 'components/AgreementCard';
 import { agreements } from 'data/agreements';
+import SignatureCount from 'components/SignatureCount';
 
 const LogoList = () => (
   <Styled.Boxlogo>
@@ -23,7 +24,7 @@ const LogoList = () => (
   </Styled.Boxlogo>
 );
 
-const Home = () => {
+const Home = props => {
   return (
     <Styled.Container>
       <header>
@@ -59,7 +60,7 @@ const Home = () => {
       </Styled.Main>
       <Styled.Signatures>
         <Styled.SignatureTitle>Firman</Styled.SignatureTitle>
-        <Styled.CountText>+20,000 personas</Styled.CountText>
+        <SignatureCount count={props.signatures} />
         <Styled.Text>
           Firma tú también en:{' '}
           <Styled.TextLink href="https://www.change.org/">
