@@ -1,6 +1,6 @@
 import * as Styled from './styles';
 
-function index() {
+const Footer = () => {
   return (
     <Styled.Footer>
       Desarrollado por{' '}
@@ -12,6 +12,6 @@ function index() {
       </Styled.TextLink>
     </Styled.Footer>
   );
-}
+};
 
-export default index;
+export default Footer;

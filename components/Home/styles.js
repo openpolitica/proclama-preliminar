@@ -3,12 +3,11 @@ import styled from 'styled-components';
 export const Container = styled('div')``;
 
 export const Header = styled('h1')`
-  // color: ${({ theme }) => theme.colors.primary};
   color: #4e4a49;
   font-size: 1.375rem;
-  text-align: center;
   font-weight: bold;
   line-height: 2rem;
+  text-align: center;
 `;
 
 export const Main = styled('main')`
@@ -31,12 +30,15 @@ export const Emphasis = styled('span')`
 
 export const Subtitle = styled('p')`
   color: #808080;
+  font-family: 'Inter', sans-serif;
   font-size: 1.25rem;
   line-height: 1.75rem;
+  margin: 0;
+  margin-top: 24px;
   text-align: center;
 `;
 
-export const SignatureSection = styled('div')`
+export const Signatures = styled('div')`
   align-items: center;
   background: #f2f2f2;
   display: flex;
@@ -76,7 +78,7 @@ export const TextLink = styled('a')`
   color: #292929;
 `;
 
-export const DownloadContent = styled('div')`
+export const Download = styled('div')`
   align-items: center;
   color: #292929;
   display: flex;
@@ -88,7 +90,7 @@ export const DownloadContent = styled('div')`
   width: 19.375rem;
 `;
 
-export const OrganizersSection = styled('div')`
+export const Organizers = styled('div')`
   color: #808080;
   font-size: 1rem;
   line-height: 1.4375rem;

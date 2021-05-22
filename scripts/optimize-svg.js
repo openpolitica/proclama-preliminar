@@ -49,9 +49,9 @@ const config = {
     // 'removeRasterImages',
     'mergePaths',
     'convertShapeToPath',
-    'sortAttrs',
+    // 'sortAttrs',
     'removeDimensions',
-    { name: 'removeAttrs', params: { attrs: '(stroke|fill)' } },
+    // { name: 'removeAttrs', params: { attrs: '(stroke|fill)' } },
   ],
 };
 

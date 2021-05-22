@@ -45,7 +45,7 @@ const Home = () => {
           </Styled.Emphasis>
         </Styled.Subtitle>
       </Styled.Main>
-      <Styled.SignatureSection>
+      <Styled.Signatures>
         <Styled.SignatureTitle>Firman</Styled.SignatureTitle>
         <Styled.CountText>+20,000 personas</Styled.CountText>
         <Styled.Text>
@@ -54,7 +54,7 @@ const Home = () => {
             change.org
           </Styled.TextLink>
         </Styled.Text>
-        <Styled.DownloadContent>
+        <Styled.Download>
           <Image
             src="/images/icons/download-icon.svg"
             width="24"
@@ -64,12 +64,12 @@ const Home = () => {
           <Styled.TextLink href="">
             Descarga el documento completo
           </Styled.TextLink>
-        </Styled.DownloadContent>
-      </Styled.SignatureSection>
-      <Styled.OrganizersSection>
+        </Styled.Download>
+      </Styled.Signatures>
+      <Styled.Organizers>
         Organizan
         <LogoList />
-      </Styled.OrganizersSection>
+      </Styled.Organizers>
       <Footer />
     </Styled.Container>
   );
