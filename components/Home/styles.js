@@ -8,10 +8,14 @@ export const Container = styled('div')`
 `;
 
 export const Header = styled('h1')`
+  border-bottom: 1px solid #c4c4c4;
   color: #4e4a49;
   font-size: 1.375rem;
   font-weight: bold;
   line-height: 2rem;
+  margin: 0;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
   text-align: center;
 `;
 
@@ -19,6 +23,9 @@ export const Main = styled('main')`
   margin: auto;
   max-width: 58.75rem;
   padding: 3.875rem 0 6.25rem;
+  @media (max-width: 58.75rem) {
+    padding-top: 1.25rem;
+  }
 `;
 
 export const Title = styled('h1')`
@@ -26,7 +33,12 @@ export const Title = styled('h1')`
   font-size: 2rem;
   font-weight: normal;
   line-height: 2.5rem;
+  margin: 0;
   text-align: center;
+  @media (max-width: 58.75rem) {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 `;
 
 export const Emphasis = styled('span')`
@@ -40,8 +52,14 @@ export const Subtitle = styled('p')`
   line-height: 1.75rem;
   margin: 0;
   margin-bottom: 3.875rem;
-  margin-top: 24px;
+  margin-top: 1.5rem;
   text-align: center;
+  @media (max-width: 58.75rem) {
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 2.25rem;
+  }
 `;
 
 export const Signatures = styled('div')`

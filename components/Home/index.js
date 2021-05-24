@@ -32,7 +32,6 @@ const Home = props => {
         <Link href="/">
           <Styled.Header>#ProclamaCiudadana</Styled.Header>
         </Link>
-        <hr />
       </header>
       <Styled.Container>
         <Styled.Main>
