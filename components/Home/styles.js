@@ -53,13 +53,6 @@ export const Signatures = styled('div')`
   padding: 3.75rem 0;
 `;
 
-export const SignatureTitle = styled('p')`
-  color: #808080;
-  font-size: 1rem;
-  line-height: 1.4375rem;
-  margin: 0;
-`;
-
 export const CountText = styled('p')`
   border-bottom: 1px solid #d9d9d9;
   color: #4e4a49;
