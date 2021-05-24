@@ -45,12 +45,29 @@ export const Subtitle = styled('p')`
 `;
 
 export const Signatures = styled('div')`
+  align-items: stretch;
   align-items: center;
   background: #f2f2f2;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: stretch;
   padding: 3.75rem 0;
+`;
+
+export const SignatureContainer = styled('div')`
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  max-width: 940px;
+  padding: 0;
+`;
+
+export const SignatureTitle = styled('p')`
+  color: #808080;
+  font-size: 1rem;
+  line-height: 1.4375rem;
+  margin: 0;
+  text-align: center;
 `;
 
 export const CountText = styled('p')`
@@ -71,6 +88,7 @@ export const Text = styled('p')`
   line-height: 1.625rem;
   margin: 0;
   padding: 2rem 3.75rem;
+  text-align: center;
 `;
 
 export const TextLink = styled('a')`
@@ -84,9 +102,14 @@ export const Download = styled('div')`
   font-size: 1rem;
   font-weight: bold;
   justify-content: space-evenly;
+  justify-content: center;
   line-height: 1.625rem;
   padding-top: 2rem;
-  width: 19.375rem;
+  width: 100%;
+`;
+
+export const ImageDownload = styled('div')`
+  padding-right: 1rem;
 `;
 
 export const Organizers = styled('div')`
