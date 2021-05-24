@@ -73,14 +73,6 @@ export const SignatureContainer = styled('div')`
   max-width: 940px;
 `;
 
-export const SignatureTitle = styled('p')`
-  color: #808080;
-  font-size: 1rem;
-  line-height: 1.4375rem;
-  margin: 0;
-  text-align: center;
-`;
-
 export const CountText = styled('p')`
   border-bottom: 1px solid #d9d9d9;
   color: #4e4a49;
