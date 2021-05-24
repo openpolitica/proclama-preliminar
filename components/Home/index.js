@@ -61,7 +61,6 @@ const Home = props => {
           </Styled.List>
         </Styled.Main>
         <Styled.Signatures>
-          <Styled.SignatureTitle>Firman</Styled.SignatureTitle>
           <SignatureCount count={props.signatures} />
           <Styled.Text>
             Firma tú también en:{' '}
