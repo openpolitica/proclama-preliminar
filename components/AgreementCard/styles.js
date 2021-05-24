@@ -43,6 +43,7 @@ const Description = styled('p')`
 `;
 
 const SeeMore = styled('button')`
+  background-color: transparent;
   border: none;
   bottom: 1rem;
   color: #808080;
