@@ -32,7 +32,6 @@ const Home = props => {
         <Link href="/">
           <Styled.Header>#ProclamaCiudadana</Styled.Header>
         </Link>
-        <hr />
       </header>
       <Styled.Container>
         <Styled.Main>
@@ -60,7 +59,9 @@ const Home = props => {
             ))}
           </Styled.List>
         </Styled.Main>
-        <Styled.Signatures>
+      </Styled.Container>
+      <Styled.Signatures>
+        <Styled.SignatureContainer>
           <SignatureCount count={props.signatures} />
           <Styled.Text>
             Firma tú también en:{' '}
@@ -69,22 +70,24 @@ const Home = props => {
             </Styled.TextLink>
           </Styled.Text>
           <Styled.Download>
-            <Image
-              src="/images/icons/download-icon.svg"
-              width="24"
-              height="24"
-              alt="icono de descarga"
-            />
+            <Styled.ImageDownload>
+              <Image
+                src="/images/icons/download-icon.svg"
+                width="24"
+                height="24"
+                alt="icono de descarga"
+              />
+            </Styled.ImageDownload>
             <Styled.TextLink href="https://drive.google.com/drive/folders/1hFH0XfkHCktmDQkuuRXICPa_FgcsGaA_">
               Descarga y comparte los acuerdos
             </Styled.TextLink>
           </Styled.Download>
-        </Styled.Signatures>
-        <Styled.Organizers>
-          Organizan
-          <LogoList />
-        </Styled.Organizers>
-      </Styled.Container>
+        </Styled.SignatureContainer>
+      </Styled.Signatures>
+      <Styled.Organizers>
+        Organizan
+        <LogoList />
+      </Styled.Organizers>
       <Footer />
     </Fragment>
   );
