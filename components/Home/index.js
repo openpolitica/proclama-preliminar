@@ -10,18 +10,22 @@ import SignatureCount from 'components/SignatureCount';
 const LogoList = () => (
   <Styled.Boxlogo>
     <Styled.LogoText>Open Política</Styled.LogoText>
-    <Image
-      src="/images/logos/200.svg"
-      width="74"
-      height="74"
-      alt="logo de 200"
-    />
-    <Image
-      src="/images/logos/transparencia.svg"
-      width="156"
-      height="74"
-      alt="logo de transparencia"
-    />
+    <Styled.ImageBox>
+      <Image
+        src="/images/logos/200.svg"
+        width="74"
+        height="74"
+        alt="logo de 200"
+      />
+    </Styled.ImageBox>
+    <Styled.ImageBox>
+      <Image
+        src="/images/logos/transparencia.svg"
+        width="156"
+        height="74"
+        alt="logo de transparencia"
+      />
+    </Styled.ImageBox>
   </Styled.Boxlogo>
 );
 
