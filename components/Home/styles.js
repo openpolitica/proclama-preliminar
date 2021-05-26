@@ -122,13 +122,24 @@ export const Organizers = styled('div')`
   max-width: 31.25rem;
   padding: 6.25rem 0;
   text-align: center;
+  @media (max-width: 37.5rem) {
+    padding: 5rem 0;
+  }
 `;
 
 export const Boxlogo = styled('div')`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  @media (max-width: 37.5rem) {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+`;
+
+export const ImageBox = styled('div')`
+  padding: 0.5rem 0;
 `;
 
 export const LogoText = styled('p')`
@@ -136,7 +147,9 @@ export const LogoText = styled('p')`
   font-size: 1.75rem;
   line-height: 1.625rem;
   margin: 0;
+  padding: 1rem 0;
 `;
+
 export const List = styled(Masonry)`
   display: flex;
   margin: -1.25rem 0 0 -1.25rem;
