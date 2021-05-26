@@ -7,7 +7,10 @@ export const SignatureCount = styled('p')`
   font-weight: normal;
   line-height: 2.625rem;
   margin: 0;
-  max-width: 940px;
   padding: 0 2.65625rem 2rem;
   text-align: center;
+  @media (max-width: 37.5rem) {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
 `;
