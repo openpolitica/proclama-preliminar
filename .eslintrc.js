@@ -7,6 +7,7 @@ module.exports = {
   ],
   plugins: ['better-styled-components'],
   rules: {
+    curly: ['error'],
     'no-console': ['warn'],
     'no-unused-vars': ['error'],
     'import/newline-after-import': ['warn', { count: 1 }],
