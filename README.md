@@ -8,6 +8,14 @@ El proyecto es una adaptación de la plantilla por defecto de Nextjs con
 una preconfiguración de herramientas de
 desarrollo tales como ESLint, Prettier y Husky.
 
+## Conexión a la Base de Datos
+Para iniciar el servidor correctamente y conectarse a la BD es necesario agregar las siguientes variables en el archivo `.env.local`
+
+```
+MONGODB_URI=
+MONGODB_DB=
+```
+
 ## Scripts incluidos
 
 El proyecto incluye los scripts por defecto de Next.js:
