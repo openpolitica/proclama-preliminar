@@ -19,7 +19,7 @@ const EventsSchema = new Schema({
   },
   status: {
     type: String,
-    enum: ['Si cumple', 'No cumple', 'Alto riesgo'],
+    enum: ['yes', 'no', 'risk'],
     required: true,
   },
   political_party: {
