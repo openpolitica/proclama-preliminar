@@ -4,6 +4,8 @@ export const Container = styled('div')`
   padding: 0 1.5rem;
   @media (max-width: 40rem) {
     padding: 0;
+    height: 100vh;
+    background-color: #f2f2f2;
   }
 `;
 
@@ -49,13 +51,6 @@ export const Label = styled('label')`
     content: ' *';
     display: inline;
   }
-`;
-
-export const TextInput = styled('input')`
-  border: solid 0.01rem #c4c4c4;
-  border-radius: 0.4rem;
-  padding: 0.5rem;
-  width: 100%;
 `;
 
 export const TextArea = styled('textarea')`
@@ -141,24 +136,19 @@ export const ButtonBox = styled('div')`
   display: flex;
   justify-content: flex-end;
   padding: 0 2rem 1rem;
+  & > button {
+    margin-left: 1rem;
+  }
   @media (max-width: 40rem) {
     padding: 0 0.8rem 1rem;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-  }
-`;
-
-export const Button = styled('button')`
-  background-color: #292929;
-  border: none;
-  color: #e5e5e5;
-  font-family: 'Neco', sans-serif;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 0.5rem 2rem;
-
-  &:active {
-    background-color: #444444;
+    & > button {
+      margin-left: 0;
+      margin-bottom: 1rem;
+      width: 12rem;
+    }
   }
 `;
 

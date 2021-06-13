@@ -1,32 +1,21 @@
-import { useState, useEffect } from 'react';
 import Form from 'components/Form';
+import withSession from 'lib/session';
 
-export async function getServerSideProps() {
-  const UPDATE_PWD = process.env.UPDATE_PWD || 'pass';
-  return {
-    props: { update_password: UPDATE_PWD },
-  };
-}
+export const getServerSideProps = withSession(async function ({ req, res }) {
+  const user = req.session.get('user');
 
-const UpdateForm = props => {
-  const [isAutenticated, setAutenticated] = useState(false);
-  useEffect(() => {
-    if (!isAutenticated) {
-      var answer = prompt('Ingresa la contraseña:', '');
-      if (answer === props.update_password) {
-        setAutenticated(true);
-      } else {
-        setAutenticated(false);
-        alert('Contaseña incorrecta');
-      }
-    }
-  }, [isAutenticated]);
-
-  if (isAutenticated) {
-    return <Form />;
-  } else {
-    return null;
+  if (!user) {
+    return {
+      redirect: {
+        destination: '/update-form/login',
+        permanent: false,
+      },
+    };
   }
-};
 
-export default UpdateForm;
+  return {
+    props: { user: req.session.get('user') },
+  };
+});
+
+export default Form;

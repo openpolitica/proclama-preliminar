@@ -1,6 +1,11 @@
 import * as Styled from './styles';
+import Router from 'next/router';
+import Button from 'components/Button';
+import TextInput from 'components/TextInput';
 import { Fragment, useState } from 'react';
 import { agreements } from 'data/agreements';
+import FooterInfo from 'components/FooterInfo';
+import fetchJson from 'lib/fetchJson';
 
 const Form = () => {
   const [currentAgreement, setCurrentAgreement] = useState({ id: '' });
@@ -56,6 +61,15 @@ const Form = () => {
     setCurrentAgreement({ id: '' });
   };
 
+  const handleExit = async event => {
+    await fetchJson('/api/logout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({}),
+    });
+    Router.push('/update-form/login');
+  };
+
   const AgreementBox = () => {
     if (currentAgreement.id) {
       return (
@@ -84,16 +98,19 @@ const Form = () => {
       id: 'status_yes',
       name: 'status',
       label: 'Sí',
+      value: 'yes',
     },
     {
       id: 'status_no',
       name: 'status',
       label: 'No',
+      value: 'no',
     },
     {
       id: 'status_risk',
       name: 'status',
       label: 'En riesgo',
+      value: 'risk',
     },
   ];
 
@@ -103,6 +120,7 @@ const Form = () => {
         <Styled.RadioButton
           id={props.id}
           name={props.name}
+          value={props.value}
           type="radio"
           required
         />
@@ -140,7 +158,7 @@ const Form = () => {
               <Styled.Label htmlFor="title" className="required">
                 Título
               </Styled.Label>
-              <Styled.TextInput
+              <TextInput
                 id="title"
                 name="title"
                 type="text"
@@ -160,7 +178,7 @@ const Form = () => {
               <Styled.Label htmlFor="source" className="required">
                 Fuente
               </Styled.Label>
-              <Styled.TextInput
+              <TextInput
                 id="source"
                 name="source"
                 type="text"
@@ -202,7 +220,12 @@ const Form = () => {
               son obligatorios.
             </Styled.InfoBox>
             <Styled.ButtonBox>
-              <Styled.Button type="submit">Actualizar</Styled.Button>
+              <Button type="button" onClick={handleExit}>
+                Salir
+              </Button>
+              <Button type="submit" primary>
+                Actualizar
+              </Button>
             </Styled.ButtonBox>
           </form>
         ) : (
@@ -213,10 +236,14 @@ const Form = () => {
             </Styled.SummaryInfo>
             <Summary />
             <Styled.ButtonBox>
-              <Styled.Button onClick={resetValues}>Enviar nuevo</Styled.Button>
+              <Button onClick={handleExit}>Salir</Button>
+              <Button onClick={resetValues} primary>
+                Enviar nuevo
+              </Button>
             </Styled.ButtonBox>
           </Fragment>
         )}
+        <FooterInfo />
       </Styled.Main>
     </Styled.Container>
   );
