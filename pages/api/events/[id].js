@@ -1,5 +1,5 @@
-import { connectToDatabase } from '../../../util/mongodb';
-import EventsSchema from '../../../models/Events';
+import { connectToDatabase } from 'util/mongodb';
+import EventsSchema from 'models/Events';
 
 export default async (req, res) => {
   const {
