@@ -1,4 +1,4 @@
-import { MongoClient } from 'mongodb';
+import mongoose from 'mongoose';
 
 const { MONGODB_URI, MONGODB_DB } = process.env;
 
@@ -34,12 +34,14 @@ export async function connectToDatabase() {
     const opts = {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      useFindAndModify: false,
+      useCreateIndex: true,
     };
 
-    cached.promise = MongoClient.connect(MONGODB_URI, opts).then(client => {
+    cached.promise = mongoose.connect(MONGODB_URI, opts).then(client => {
       return {
         client,
-        db: client.db(MONGODB_DB),
+        isConnected: client.connections[0].readyState,
       };
     });
   }
