@@ -1,8 +1,20 @@
 import { connectToDatabase } from 'util/mongodb';
 import EventsSchema from 'models/Events';
 import AgreementsSchema from 'models/Agreements';
+import withSession from 'lib/session';
 
-export default async (req, res) => {
+export const createEvent = async body => {
+  //Event creation
+  const newEvent = await EventsSchema.create(new EventsSchema(body));
+  //Agreement update for new related event
+  await AgreementsSchema.updateOne(
+    { id: body.agreement_id },
+    { $push: { events: newEvent._id } },
+  );
+  return newEvent;
+};
+
+export default withSession(async (req, res) => {
   const { method, body } = req;
 
   await connectToDatabase();
@@ -20,14 +32,14 @@ export default async (req, res) => {
       break;
     case 'POST':
       try {
-        //Event creation
-        const newEvent = await EventsSchema.create(new EventsSchema(body));
-        //Agreement update for new related event
-        await AgreementsSchema.updateOne(
-          { id: body.agreement_id },
-          { $push: { events: newEvent._id } },
-        );
-        res.status(200).json({ success: true, data: newEvent });
+        const user = req.session.get('user');
+
+        if (user) {
+          const newEvent = await createEvent(body);
+          res.status(200).json({ success: true, data: newEvent });
+        } else {
+          res.status(403).json({ success: false, message: 'Not authorized' });
+        }
       } catch (error) {
         res.status(400).json({ success: false, message: error.message });
       }
@@ -37,4 +49,4 @@ export default async (req, res) => {
       res.status(405).end(`Method ${method} Not Allowed`);
       break;
   }
-};
+});

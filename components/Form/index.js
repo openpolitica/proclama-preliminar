@@ -21,30 +21,50 @@ const Form = () => {
       return;
     }
 
-    const body = [
+    const body = {
+      title: event.target.title.value,
+      description: event.target.description.value,
+      data_source: event.target.source.value,
+      agreement_id: event.target.agreement.value,
+      status: event.target.status.value,
+      political_party: 'Perú Libre',
+    };
+
+    try {
+      await fetchJson('/api/events', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+      alert('Formulario enviado');
+    } catch (error) {
+      alert('Error publicando los datos');
+      return;
+    }
+
+    const data = [
       {
         label: 'Título',
-        value: event.target.title.value,
+        value: body.title,
       },
       {
         label: 'Descripción',
-        value: event.target.description.value,
+        value: body.description,
       },
       {
         label: 'Fuente',
-        value: event.target.source.value,
+        value: body.data_source,
       },
       {
         label: 'Número de acuerdo',
-        value: event.target.agreement.value,
+        value: body.agreement_id,
       },
       {
         label: '¿Cumple el acuerdo?',
-        value: event.target.status.value,
+        value: body.status,
       },
     ];
-    setCurrentData(body);
-    alert('Formulario enviado');
+    setCurrentData(data);
   };
 
   const handleSelect = event => {
