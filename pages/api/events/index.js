@@ -24,7 +24,7 @@ export default async (req, res) => {
         const newEvent = await EventsSchema.create(new EventsSchema(body));
         //Agreement update for new related event
         await AgreementsSchema.updateOne(
-          { id: body.agreement },
+          { id: body.agreement_id },
           { $push: { events: newEvent._id } },
         );
         res.status(200).json({ success: true, data: newEvent });
