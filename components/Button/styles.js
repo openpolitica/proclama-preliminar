@@ -22,7 +22,8 @@ export const Button = styled('button')`
     props.disabled
       ? textColorPriority['disabled']
       : textColorPriority[props.level || 'primary']};
-  cursor: ${props => (props.disabled ? 'auto' : 'pointer')};
+  cursor: ${props =>
+    props.disabled ? (props.isLoading ? 'wait' : 'auto') : 'pointer'};
   font-family: 'Neco', sans-serif;
   font-size: 1rem;
   font-weight: bold;
