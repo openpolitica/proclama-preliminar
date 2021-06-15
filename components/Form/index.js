@@ -3,11 +3,10 @@ import Router from 'next/router';
 import Button from 'components/Button';
 import TextInput from 'components/TextInput';
 import { Fragment, useState } from 'react';
-import { agreements } from 'data/agreements';
 import FooterInfo from 'components/FooterInfo';
 import fetchJson from 'lib/fetchJson';
 
-const Form = () => {
+const Form = ({ agreements }) => {
   const [currentAgreement, setCurrentAgreement] = useState({ id: '' });
   const [currentData, setCurrentData] = useState(null);
 
@@ -115,19 +114,19 @@ const Form = () => {
 
   const alternatives = [
     {
-      id: 'status_yes',
+      id: 'statusYes',
       name: 'status',
       label: 'Sí',
       value: 'yes',
     },
     {
-      id: 'status_no',
+      id: 'statusNo',
       name: 'status',
       label: 'No',
       value: 'no',
     },
     {
-      id: 'status_risk',
+      id: 'statusRisk',
       name: 'status',
       label: 'En riesgo',
       value: 'risk',
@@ -217,7 +216,7 @@ const Form = () => {
                 value={currentAgreement.id}
                 name="agreement">
                 <option value="">- -</option>
-                {agreements.map(({ ...item }) => (
+                {agreements?.map(({ ...item }) => (
                   <option key={item.id} value={item.id}>
                     {item.id}
                   </option>
@@ -240,12 +239,10 @@ const Form = () => {
               son obligatorios.
             </Styled.InfoBox>
             <Styled.ButtonBox>
-              <Button type="button" onClick={handleExit}>
+              <Button type="button" level="secondary" onClick={handleExit}>
                 Salir
               </Button>
-              <Button type="submit" primary>
-                Actualizar
-              </Button>
+              <Button type="submit">Actualizar</Button>
             </Styled.ButtonBox>
           </form>
         ) : (
@@ -256,10 +253,10 @@ const Form = () => {
             </Styled.SummaryInfo>
             <Summary />
             <Styled.ButtonBox>
-              <Button onClick={handleExit}>Salir</Button>
-              <Button onClick={resetValues} primary>
-                Enviar nuevo
+              <Button onClick={handleExit} type="button" level="secondary">
+                Salir
               </Button>
+              <Button onClick={resetValues}>Enviar nuevo</Button>
             </Styled.ButtonBox>
           </Fragment>
         )}
