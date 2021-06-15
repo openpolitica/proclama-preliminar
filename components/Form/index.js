@@ -9,9 +9,12 @@ import fetchJson from 'lib/fetchJson';
 const Form = ({ agreements }) => {
   const [currentAgreement, setCurrentAgreement] = useState({ id: '' });
   const [currentData, setCurrentData] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const updateForm = async event => {
     event.preventDefault();
+
+    setIsLoading(true);
 
     if (!currentAgreement.id) {
       alert(
@@ -38,6 +41,7 @@ const Form = ({ agreements }) => {
       alert('Formulario enviado');
     } catch (error) {
       alert('Error publicando los datos');
+      setIsLoading(false);
       return;
     }
 
@@ -64,6 +68,7 @@ const Form = ({ agreements }) => {
       },
     ];
     setCurrentData(data);
+    setIsLoading(false);
   };
 
   const handleSelect = event => {
@@ -242,7 +247,9 @@ const Form = ({ agreements }) => {
               <Button type="button" level="secondary" onClick={handleExit}>
                 Salir
               </Button>
-              <Button type="submit">Actualizar</Button>
+              <Button type="submit" disabled={isLoading} isLoading={isLoading}>
+                Actualizar
+              </Button>
             </Styled.ButtonBox>
           </form>
         ) : (
