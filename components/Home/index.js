@@ -7,6 +7,7 @@ import AgreementCard from 'components/AgreementCard';
 import SignatureCount from 'components/SignatureCount';
 import useSWR from 'swr';
 import fetcher from 'lib/fetcher';
+import EventCard from 'components/EventCard';
 
 const LogoList = () => (
   <Styled.Boxlogo>
@@ -34,6 +35,9 @@ export default function Home(props) {
   const { data } = useSWR('/api/agreements', fetcher);
   const agreements = data?.data ?? [];
 
+  const { data: eventData } = useSWR('/api/events', fetcher);
+  const events = eventData?.data.slice(0, 3) ?? [];
+
   return (
     <Fragment>
       <header>
@@ -56,6 +60,33 @@ export default function Home(props) {
               sabemos también lo que es recuperarla.
             </Styled.Emphasis>
           </Styled.Subtitle>
+          <Styled.EventTitle>¿Qué ha hecho el partido?</Styled.EventTitle>
+          <Styled.EventSubtitle>
+            Revisemos el historial de sus declaraciones que han ido a favor o en
+            contra de alguno de los acuerdos.
+          </Styled.EventSubtitle>
+          <Styled.EventList>
+            {events?.map(
+              ({
+                _id,
+                title,
+                description,
+                created_At,
+                data_source,
+                status,
+              }) => (
+                <EventCard
+                  key={_id}
+                  date={created_At}
+                  title={title}
+                  description={description}
+                  dataSource={data_source}
+                  status={status}
+                />
+              ),
+            )}
+          </Styled.EventList>
+          <Styled.AgreementTitle>Lista de Acuerdos</Styled.AgreementTitle>
           <Styled.List
             breakpointCols={{
               default: 3,

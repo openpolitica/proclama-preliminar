@@ -51,14 +51,12 @@ export const Subtitle = styled('p')`
   font-size: 1.25rem;
   line-height: 1.75rem;
   margin: 0;
-  margin-bottom: 3.875rem;
   margin-top: 1.5rem;
   text-align: center;
   @media (max-width: 58.75rem) {
     margin-top: 1rem;
     font-size: 1rem;
     line-height: 1.5rem;
-    margin-bottom: 2.25rem;
   }
 `;
 
@@ -154,4 +152,32 @@ export const List = styled(Masonry)`
   display: flex;
   margin: -1.25rem 0 0 -1.25rem;
   width: calc(100% + 1.25rem);
+`;
+
+export const EventTitle = styled(Title)`
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  margin-top: 6.25rem;
+  @media (max-width: 58.75rem) {
+    margin-top: 3.75rem;
+  }
+`;
+export const EventSubtitle = styled(Subtitle)`
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+`;
+export const EventList = styled('div')`
+  margin-bottom: 6.25rem;
+  div + div {
+    margin-top: 1rem;
+  }
+  @media (max-width: 58.75rem) {
+    margin-bottom: 3.75rem;
+  }
+`;
+export const AgreementTitle = styled(Title)`
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
 `;
