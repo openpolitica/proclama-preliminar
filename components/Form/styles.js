@@ -66,6 +66,7 @@ export const Select = styled('select')`
   background-color: white;
   border: solid 0.01rem #c4c4c4;
   border-radius: 0.4rem;
+  cursor: ${props => (props.disabled ? 'auto' : 'pointer')};
   padding: 0.5rem;
   width: 4rem;
 `;
@@ -103,10 +104,12 @@ export const AgreementMessage = styled('p')`
 `;
 
 export const RadioButton = styled('input')`
+  cursor: ${props => (props.disabled ? 'auto' : 'pointer')};
   text-size: 1rem;
 `;
 
 export const RadioLabel = styled('label')`
+  cursor: ${props => (props.disabled ? 'auto' : 'pointer')};
   padding: 0 0.5rem;
   text-size: 0.8rem;
 `;

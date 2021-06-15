@@ -46,9 +46,7 @@ const Login = () => {
           </Styled.InputContainer>
           {errorMsg ? <Styled.Message>{errorMsg}</Styled.Message> : null}
           <Styled.ButtonBox>
-            <Button type="submit" primary>
-              Acceder
-            </Button>
+            <Button type="submit">Acceder</Button>
           </Styled.ButtonBox>
         </form>
         <FooterInfo />

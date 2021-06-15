@@ -1,6 +1,11 @@
 import { connectToDatabase } from 'util/mongodb';
 import AgreementsSchema from 'models/Agreements';
 
+export const getAgreementsOnly = async () => {
+  await connectToDatabase();
+  return await AgreementsSchema.find({});
+};
+
 export default async (req, res) => {
   const { method } = req;
 
