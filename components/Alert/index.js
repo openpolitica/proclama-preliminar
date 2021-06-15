@@ -5,9 +5,9 @@ const statusLabel = {
   risk: '¡Acuerdo en riesgo!',
   no: 'Acuerdo cumplido',
 };
-export default function Alert({ status }) {
+export default function Alert({ status, ...props }) {
   return (
-    <Message status={status} role="alert">
+    <Message status={status} role="alert" {...props}>
       {statusLabel[status]}
     </Message>
   );
