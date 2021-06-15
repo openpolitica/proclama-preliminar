@@ -4,8 +4,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Footer from 'components/Footer';
 import AgreementCard from 'components/AgreementCard';
-import { agreements } from 'data/agreements';
 import SignatureCount from 'components/SignatureCount';
+import useSWR from 'swr';
+import fetcher from 'lib/fetcher';
 
 const LogoList = () => (
   <Styled.Boxlogo>
@@ -29,7 +30,10 @@ const LogoList = () => (
   </Styled.Boxlogo>
 );
 
-const Home = props => {
+export default function Home(props) {
+  const { data } = useSWR('/api/agreements', fetcher);
+  const agreements = data?.data ?? [];
+
   return (
     <Fragment>
       <header>
@@ -58,8 +62,14 @@ const Home = props => {
               900: 2,
               600: 1,
             }}>
-            {agreements.map(({ ...item }) => (
-              <AgreementCard key={item.id} {...item} />
+            {agreements?.map(({ id, title, description, events }) => (
+              <AgreementCard
+                key={id}
+                id={id}
+                title={title}
+                description={description}
+                status={events?.[0]?.status}
+              />
             ))}
           </Styled.List>
         </Styled.Main>
@@ -95,6 +105,4 @@ const Home = props => {
       <Footer />
     </Fragment>
   );
-};
-
-export default Home;
+}
