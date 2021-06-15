@@ -80,7 +80,7 @@ export default function Home(props) {
                   date={created_At}
                   title={title}
                   description={description}
-                  dataSource={data_source}
+                  url={data_source}
                   status={status}
                 />
               ),
