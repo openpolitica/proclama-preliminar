@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Card = styled('div')`
   background-color: #f2f2f2;
   margin: 1.25rem 0 0 1.25rem;
-  max-height: ${({ expanded }) => (expanded ? 'unset' : '260px')};
+  max-height: ${({ expanded }) => (expanded ? 'unset' : '323px')};
   overflow: hidden;
   padding: 1rem 1.5rem 3rem;
   position: relative;
