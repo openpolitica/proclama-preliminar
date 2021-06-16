@@ -1,9 +1,9 @@
 import { Message } from './styles';
 
 const statusLabel = {
-  yes: 'Acuerdo incumplido',
+  yes: 'Acuerdo cumplido',
   risk: '¡Acuerdo en riesgo!',
-  no: 'Acuerdo cumplido',
+  no: 'Acuerdo incumplido',
 };
 export default function Alert({ status, ...props }) {
   return (
