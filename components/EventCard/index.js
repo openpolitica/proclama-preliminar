@@ -1,5 +1,4 @@
 import * as Styled from './styles';
-import ArrowRightIcon from 'public/images/icons/arrow-right.svg';
 
 const formatDate = date => {
   const options = {
@@ -25,7 +24,7 @@ export default function EventCard({ date, title, description, status, url }) {
       </Styled.HeaderCard>
       <Styled.Description>{description}</Styled.Description>
       <Styled.SourceLink href={url} target="_blank" rel="noopener noreferrer">
-        <ArrowRightIcon />
+        <Styled.ArrowRight />
         Fuente
       </Styled.SourceLink>
     </Styled.Card>
