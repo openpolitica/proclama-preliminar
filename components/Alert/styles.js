@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 const statusColor = {
-  yes: { color: '#C00C0C', bg: '#FCCFCF' },
+  yes: { color: '#21AB50', bg: '#D4F7E0' },
   risk: { color: '#B68811', bg: '#FEEDC3' },
-  no: { color: '#21AB50', bg: '#D4F7E0' },
+  no: { color: '#C00C0C', bg: '#FCCFCF' },
 };
 
 const Message = styled('div')`
