@@ -36,7 +36,7 @@ export default function Home(props) {
   const agreements = data?.data ?? [];
 
   const { data: eventData } = useSWR('/api/events', fetcher);
-  const events = eventData?.data.slice(0, 3) ?? [];
+  const events = eventData?.data.slice(-3).reverse() ?? [];
 
   return (
     <Fragment>
