@@ -17,9 +17,7 @@ export default async (req, res) => {
         const agreements = await AgreementsSchema.find({}).populate('events');
         res.status(200).json({ success: true, data: agreements });
       } catch (error) {
-        res
-          .status(400)
-          .json({ success: false, message: 'Error retrieving data' });
+        res.status(400).json({ success: false, message: error.toString() });
       }
       break;
     default:
