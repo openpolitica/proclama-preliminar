@@ -53,6 +53,13 @@ export const Label = styled('label')`
   }
 `;
 
+export const Example = styled('p')`
+  color: #888888;
+  display: block;
+  font-size: 0.75rem;
+  margin: 0.25rem 0 0;
+`;
+
 export const TextArea = styled('textarea')`
   border: solid 0.01rem #c4c4c4;
   border-radius: 0.4rem;
