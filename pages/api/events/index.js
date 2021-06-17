@@ -14,6 +14,12 @@ export const createEvent = async body => {
   return newEvent;
 };
 
+export const getEvents = async () => {
+  await connectToDatabase();
+  const events = await EventsSchema.find({});
+  return events;
+};
+
 export default withSession(async (req, res) => {
   const { method, body } = req;
 

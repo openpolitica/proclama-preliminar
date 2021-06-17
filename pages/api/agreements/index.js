@@ -6,6 +6,11 @@ export const getAgreementsOnly = async () => {
   return await AgreementsSchema.find({});
 };
 
+export const getAgreements = async () => {
+  await connectToDatabase();
+  return await AgreementsSchema.find({}).populate('events');
+};
+
 export default async (req, res) => {
   const { method } = req;
 
@@ -17,9 +22,7 @@ export default async (req, res) => {
         const agreements = await AgreementsSchema.find({}).populate('events');
         res.status(200).json({ success: true, data: agreements });
       } catch (error) {
-        res
-          .status(400)
-          .json({ success: false, message: 'Error retrieving data' });
+        res.status(400).json({ success: false, message: error.toString() });
       }
       break;
     default:

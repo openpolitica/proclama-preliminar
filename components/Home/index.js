@@ -5,8 +5,6 @@ import Image from 'next/image';
 import Footer from 'components/Footer';
 import AgreementCard from 'components/AgreementCard';
 import SignatureCount from 'components/SignatureCount';
-import useSWR from 'swr';
-import fetcher from 'lib/fetcher';
 import EventCard from 'components/EventCard';
 
 const LogoList = () => (
@@ -32,11 +30,8 @@ const LogoList = () => (
 );
 
 export default function Home(props) {
-  const { data } = useSWR('/api/agreements', fetcher);
-  const agreements = data?.data ?? [];
-
-  const { data: eventData } = useSWR('/api/events', fetcher);
-  const events = eventData?.data.slice(-3).reverse() ?? [];
+  const agreements = props.agreements;
+  const events = props.events?.slice(0, 3);
 
   return (
     <Fragment>
@@ -99,7 +94,7 @@ export default function Home(props) {
                 id={id}
                 title={title}
                 description={description}
-                status={events?.[0]?.status}
+                status={events[events.length - 1]?.status}
               />
             ))}
           </Styled.List>
