@@ -1,13 +1,12 @@
 import * as Styled from './styles';
-import { Fragment } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Footer from 'components/Footer';
 import AgreementCard from 'components/AgreementCard';
 import SignatureCount from 'components/SignatureCount';
-import useSWR from 'swr';
-import fetcher from 'lib/fetcher';
 import EventCard from 'components/EventCard';
+import fetchJson from 'lib/fetchJson';
 
 const LogoList = () => (
   <Styled.Boxlogo>
@@ -32,11 +31,21 @@ const LogoList = () => (
 );
 
 export default function Home(props) {
-  const { data } = useSWR('/api/agreements', fetcher);
-  const agreements = data?.data ?? [];
+  const [agreements, setAgreements] = useState([]);
+  const [events, setEvents] = useState([]);
 
-  const { data: eventData } = useSWR('/api/events', fetcher);
-  const events = eventData?.data.slice(-3).reverse() ?? [];
+  useEffect(() => {
+    (async () => {
+      try {
+        const { data } = await fetchJson('/api/agreements');
+        setAgreements(data);
+        const { data: eventData } = await fetchJson('/api/events');
+        setEvents(eventData.slice(-3).reverse());
+      } catch (e) {
+        console.error(e);
+      }
+    })();
+  }, []);
 
   return (
     <Fragment>
