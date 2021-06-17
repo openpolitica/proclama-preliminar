@@ -7,7 +7,7 @@ const formatDate = date => {
     month: 'long',
   };
 
-  return new window.Date(date).toLocaleDateString('ES-pe', options);
+  return new Date(date).toLocaleDateString('ES-pe', options);
 };
 
 export default function EventCard({ date, title, description, status, url }) {

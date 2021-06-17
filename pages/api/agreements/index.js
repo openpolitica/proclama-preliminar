@@ -6,6 +6,11 @@ export const getAgreementsOnly = async () => {
   return await AgreementsSchema.find({});
 };
 
+export const getAgreements = async () => {
+  await connectToDatabase();
+  return await AgreementsSchema.find({}).populate('events');
+};
+
 export default async (req, res) => {
   const { method } = req;
 
