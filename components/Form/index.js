@@ -14,6 +14,10 @@ const Form = ({ agreements }) => {
   const updateForm = async event => {
     event.preventDefault();
 
+    if (isLoading) {
+      return;
+    }
+
     setIsLoading(true);
 
     if (!currentAgreement.id) {
