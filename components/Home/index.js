@@ -66,6 +66,7 @@ export default function Home(props) {
             {events?.map(
               ({
                 _id,
+                agreement_id,
                 title,
                 description,
                 created_At,
@@ -75,6 +76,11 @@ export default function Home(props) {
                 <EventCard
                   key={_id}
                   date={created_At}
+                  agreement_id={agreement_id}
+                  agreement_title={
+                    agreements.find(element => element.id === agreement_id)
+                      .title
+                  }
                   title={title}
                   description={description}
                   url={data_source}

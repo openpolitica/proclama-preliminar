@@ -10,18 +10,27 @@ const formatDate = date => {
   return new Date(date).toLocaleDateString('ES-pe', options);
 };
 
-export default function EventCard({ date, title, description, status, url }) {
+export default function EventCard({
+  date,
+  agreement_id,
+  agreement_title,
+  title,
+  description,
+  status,
+  url,
+}) {
   return (
     <Styled.Card>
       <Styled.HeaderCard>
         <div>
           <Styled.Date>{formatDate(date)}</Styled.Date>
-          <Styled.Title>
-            <b>Acuerdo:</b> {title}
-          </Styled.Title>
+          <Styled.HeaderTitle>
+            <b>Acuerdo #{agreement_id}:</b> {agreement_title}
+          </Styled.HeaderTitle>
         </div>
         <Styled.Alert status={status}></Styled.Alert>
       </Styled.HeaderCard>
+      <Styled.Title>{title}</Styled.Title>
       <Styled.Description>{description}</Styled.Description>
       <Styled.SourceLink href={url} target="_blank" rel="noopener noreferrer">
         <Styled.ArrowRight />
