@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
 const statusColor = {
-  yes: { color: '#21AB50', bg: '#D4F7E0' },
-  risk: { color: '#B68811', bg: '#FEEDC3' },
-  no: { color: '#C00C0C', bg: '#FCCFCF' },
+  risk: { color: '#B68811', bg: '#FEEDC3', border: '#F6E05E' },
+  no: { color: '#C00C0C', bg: '#FCCFCF', border: '#FC8181' },
 };
 
 const Message = styled('div')`
@@ -19,4 +18,4 @@ const Message = styled('div')`
   text-align: center;
 `;
 
-export { Message };
+export { Message, statusColor };
