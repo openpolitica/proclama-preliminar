@@ -20,7 +20,7 @@ export default function EventCard({
   url,
 }) {
   return (
-    <Styled.Card>
+    <Styled.Card status={status}>
       <Styled.HeaderCard>
         <div>
           <Styled.Date>{formatDate(date)}</Styled.Date>
