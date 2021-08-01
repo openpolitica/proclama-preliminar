@@ -7,6 +7,7 @@ const Card = styled('div')`
   border: 1px solid #e6e6e6;
   border-radius: 4px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  overflow: auto;
   padding: 1.5rem;
 `;
 
@@ -16,7 +17,7 @@ const HeaderCard = styled('div')`
   display: flex;
   font-family: Inter;
   justify-content: space-between;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   @media (max-width: 58.75rem) {
     flex-direction: column;
     align-items: flex-start;
@@ -27,18 +28,27 @@ const Date = styled('span')`
   color: #808080;
 `;
 
-const Title = styled('h3')`
+const HeaderTitle = styled('h3')`
   font-size: 1rem;
   font-weight: 400;
   margin: 0;
   margin-top: 0.5rem;
 `;
 
-const Description = styled('p')`
-  color: #1a1a1a;
+const Title = styled('h3')`
   font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 0.25rem;
+  margin-top: 1.5rem;
+`;
+
+const Description = styled('p')`
+  color: rgba(0, 0, 0, 0.48);
+  font-family: Inter;
+  font-size: 1rem;
+  margin: 0;
   margin-bottom: 1rem;
-  margin-top: 1rem;
 `;
 
 const SourceLink = styled('a')`
@@ -66,6 +76,7 @@ export {
   HeaderCard,
   Alert,
   Date,
+  HeaderTitle,
   Title,
   Description,
   SourceLink,
