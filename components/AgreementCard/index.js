@@ -10,7 +10,7 @@ export default function AgreementCard({ id, title, description, status }) {
       <Number>{id}</Number>
       <Title>{title}</Title>
       {status ? <Alert status={status} /> : null}
-      <Description>{description}</Description>
+      <Description expanded={expanded}>{description}</Description>
       <SeeMore onClick={() => setExpanded(prev => !prev)}>
         {expanded ? 'Leer menos' : 'Leer más'}
       </SeeMore>
