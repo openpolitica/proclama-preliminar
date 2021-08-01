@@ -123,12 +123,6 @@ const Form = ({ agreements }) => {
 
   const alternatives = [
     {
-      id: 'statusYes',
-      name: 'status',
-      label: 'Sí',
-      value: 'yes',
-    },
-    {
       id: 'statusNo',
       name: 'status',
       label: 'No',
