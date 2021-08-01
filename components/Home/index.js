@@ -43,9 +43,9 @@ export default function Home(props) {
       <Styled.Container>
         <Styled.Main>
           <Styled.Title>
-            Conoce y hazle seguimiento a los{' '}
-            <Styled.Emphasis>12 acuerdos democráticos</Styled.Emphasis> que han
-            firmado los candidatos a la segunda vuelta
+            Sigue el estado de los{' '}
+            <Styled.Emphasis>12 acuerdos democráticos</Styled.Emphasis> firmados
+            por el Presidente Pedro Castillo
           </Styled.Title>
           <Styled.Subtitle>
             El Perú nació bajo el espíritu de la libertad. Al llegar el
@@ -55,7 +55,9 @@ export default function Home(props) {
               sabemos también lo que es recuperarla.
             </Styled.Emphasis>
           </Styled.Subtitle>
-          <Styled.EventTitle>¿Qué ha hecho el partido?</Styled.EventTitle>
+          <Styled.EventTitle>
+            ¿Qué ha hecho el Presidente con los acuerdos?
+          </Styled.EventTitle>
           <Styled.EventSubtitle>
             Revisemos el historial de sus declaraciones que han ido a favor o en
             contra de alguno de los acuerdos.
