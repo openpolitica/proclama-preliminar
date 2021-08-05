@@ -74,8 +74,8 @@ export default function Home(props) {
                 <EventCard
                   key={_id}
                   date={created_At}
-                  agreement_id={agreement_id}
-                  agreement_title={
+                  agreementId={agreement_id}
+                  agreementTitle={
                     agreements.find(element => element.id === agreement_id)
                       .title
                   }

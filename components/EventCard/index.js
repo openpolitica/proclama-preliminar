@@ -12,8 +12,8 @@ const formatDate = date => {
 
 export default function EventCard({
   date,
-  agreement_id,
-  agreement_title,
+  agreementId,
+  agreementTitle,
   title,
   description,
   status,
@@ -25,7 +25,7 @@ export default function EventCard({
         <div>
           <Styled.Date>{formatDate(date)}</Styled.Date>
           <Styled.HeaderTitle>
-            <b>Acuerdo #{agreement_id}:</b> {agreement_title}
+            <b>Acuerdo #{agreementId}:</b> {agreementTitle}
           </Styled.HeaderTitle>
         </div>
         <Styled.Alert status={status}></Styled.Alert>
