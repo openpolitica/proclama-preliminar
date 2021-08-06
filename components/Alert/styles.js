@@ -9,6 +9,7 @@ const Message = styled('div')`
   background-color: ${({ status }) => statusColor[status].bg};
   border-radius: 0.25rem;
   color: ${({ status }) => statusColor[status].color};
+  font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
   margin-bottom: 0.75rem;
   margin-top: 0.75rem;
