@@ -107,7 +107,7 @@ export default function Home(props) {
         <Styled.SignatureContainer>
           <SignatureCount count={props.signatures} />
           <Styled.Text>
-            Firma tú también en:{' '}
+            Fuente:{' '}
             <Styled.TextLink href="https://www.change.org/p/actransparencia-keikofujimori-pedrocastillote-canaln-que-los-candidatos-pedro-castillo-y-keiko-fujimori-firmen-la-siguiente-proclama-ciudadana">
               change.org
             </Styled.TextLink>
