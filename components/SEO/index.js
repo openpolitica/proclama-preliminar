@@ -1,9 +1,10 @@
 import { Fragment } from 'react';
 
-export default function SEO(props) {
+export default function SEO() {
   const meta = {
-    title: 'Proclama Ciudadana',
-    description: `12 acuerdos esenciales que la ciudadanía exige a ambos candidatos a la Presidencia de la República. Promovido por la Asociación Civil Transparencia.`,
+    title: 'Vigilantes.pe',
+    description:
+      '12 acuerdos esenciales que asumió el presidente Pedro Castillo mediante la proclama ciudadana. Promovido por la Asociación Civil Transparencia.',
     image: 'https://proclamaciudadana.pe/images/banner.png',
     type: 'website',
   };
