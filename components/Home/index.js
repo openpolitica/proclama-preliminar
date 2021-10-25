@@ -37,23 +37,18 @@ export default function Home(props) {
     <Fragment>
       <header>
         <Link href="/">
-          <Styled.Header>#ProclamaCiudadana</Styled.Header>
+          <Styled.Header>#Vigilantes</Styled.Header>
         </Link>
       </header>
       <Styled.Container>
         <Styled.Main>
           <Styled.Title>
-            Sigue el estado de los{' '}
-            <Styled.Emphasis>12 acuerdos democráticos</Styled.Emphasis> firmados
-            por el Presidente Pedro Castillo
+            <Styled.Emphasis>12 acuerdos</Styled.Emphasis> esenciales que asumió
+            el presidente Pedro Castillo mediante la proclama ciudadana
           </Styled.Title>
           <Styled.Subtitle>
-            El Perú nació bajo el espíritu de la libertad. Al llegar el
-            Bicentenario, toca a su pueblo defenderla porque ella solo es
-            posible en democracia. En el Perú, sabemos lo que es perderla y{' '}
-            <Styled.Emphasis>
-              sabemos también lo que es recuperarla.
-            </Styled.Emphasis>
+            Conoce y hazle seguimiento a los 12 acuerdos a favor de la
+            democracia que asumió el presidente Pedro Castillo
           </Styled.Subtitle>
           <Styled.EventTitle>
             ¿Qué ha hecho el Presidente con los acuerdos?
