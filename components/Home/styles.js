@@ -49,13 +49,13 @@ export const Emphasis = styled('span')`
 export const Subtitle = styled('p')`
   color: #808080;
   font-family: 'Inter', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.75rem;
   margin: 0;
   margin-top: 1.5rem;
   text-align: center;
   @media (max-width: 58.75rem) {
-    margin-top: 1rem;
+    margin-top: 1.125rem;
     font-size: 1rem;
     line-height: 1.5rem;
   }
