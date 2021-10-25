@@ -34,7 +34,7 @@ export default function EventCard({
       <Styled.Description>{description}</Styled.Description>
       <Styled.SourceLink href={url} target="_blank" rel="noopener noreferrer">
         <Styled.ArrowRight />
-        Fuente
+        Referencia
       </Styled.SourceLink>
     </Styled.Card>
   );
