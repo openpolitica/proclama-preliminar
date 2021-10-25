@@ -1,10 +1,9 @@
 import * as Styled from './styles';
 
-const SignatureCount = props => {
+const SignatureCount = () => {
   return (
     <Styled.SignatureCount>
-      {props.count} peruanos han firmado para que los candidatos respeten estos
-      acuerdos
+      Más de 30,000 peruanos han firmado para que se respeten estos acuerdos
     </Styled.SignatureCount>
   );
 };
