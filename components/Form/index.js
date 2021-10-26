@@ -207,7 +207,7 @@ const Form = ({ agreements }) => {
                 autoComplete="source"
                 required
               />
-              <Styled.Example>Ej. https://proclamaciudadana.pe/</Styled.Example>
+              <Styled.Example>Ej. https://vigilantes.pe/</Styled.Example>
             </Styled.InputContainer>
 
             <Styled.InputContainer>
