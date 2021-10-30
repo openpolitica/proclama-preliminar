@@ -89,7 +89,7 @@ const Form = ({ agreements }) => {
     setCurrentAgreement({ id: '' });
   };
 
-  const handleExit = async event => {
+  const handleExit = async () => {
     await fetchJson('/api/logout', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
