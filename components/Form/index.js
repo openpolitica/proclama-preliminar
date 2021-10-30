@@ -67,7 +67,7 @@ const Form = ({ agreements }) => {
         value: body.agreement_id,
       },
       {
-        label: '¿Cumple el acuerdo?',
+        label: 'Nivel de alerta',
         value: body.status,
       },
     ];
@@ -123,16 +123,22 @@ const Form = ({ agreements }) => {
 
   const alternatives = [
     {
-      id: 'statusNo',
+      id: 'statusModerate',
       name: 'status',
-      label: 'No',
-      value: 'no',
+      label: 'Alerta moderada',
+      value: 'moderate',
     },
     {
-      id: 'statusRisk',
+      id: 'statusHigh',
       name: 'status',
-      label: 'En riesgo',
-      value: 'risk',
+      label: 'Alerta grave',
+      value: 'high',
+    },
+    {
+      id: 'statusExtreme',
+      name: 'status',
+      label: 'Alerta muy grave',
+      value: 'extreme',
     },
   ];
 
@@ -230,7 +236,7 @@ const Form = ({ agreements }) => {
             <AgreementBox />
             <Styled.InputContainer>
               <Styled.Label htmlFor="status" className="required">
-                ¿Cumple el acuerdo?
+                ¿Qué nivel de alerta tiene?
               </Styled.Label>
               <Styled.RadioGroupContainer>
                 {alternatives.map(element => (
