@@ -22,7 +22,7 @@ const Form = ({ agreements }) => {
 
     if (!currentAgreement.id) {
       alert(
-        'No ha seleccionado un acuerdo, debe hacerlo de la lista desplegable',
+        'No ha seleccionado un compromiso, debe hacerlo de la lista desplegable',
       );
       return;
     }
@@ -63,7 +63,7 @@ const Form = ({ agreements }) => {
         value: body.data_source,
       },
       {
-        label: 'Número de acuerdo',
+        label: 'Número de compromiso',
         value: body.agreement_id,
       },
       {
@@ -114,7 +114,7 @@ const Form = ({ agreements }) => {
     return (
       <Styled.AgreementContainer>
         <Styled.AgreementMessage>
-          No se ha seleccionado ningún acuerdo. Seleccione uno de la lista
+          No se ha seleccionado ningún compromiso. Seleccione uno de la lista
           desplegable.
         </Styled.AgreementMessage>
       </Styled.AgreementContainer>
@@ -218,7 +218,7 @@ const Form = ({ agreements }) => {
 
             <Styled.InputContainer>
               <Styled.Label htmlFor="agreement" className="required">
-                Número de acuerdo
+                Número de compromiso
               </Styled.Label>
               <Styled.Select
                 id="agreement"

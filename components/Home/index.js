@@ -43,19 +43,19 @@ export default function Home(props) {
       <Styled.Container>
         <Styled.Main>
           <Styled.Title>
-            <Styled.Emphasis>12 acuerdos</Styled.Emphasis> esenciales que asumió
-            el presidente Pedro Castillo mediante la proclama ciudadana
+            <Styled.Emphasis>12 compromisos</Styled.Emphasis> esenciales que
+            asumió el presidente Pedro Castillo mediante la proclama ciudadana
           </Styled.Title>
           <Styled.Subtitle>
-            Conoce y hazle seguimiento a los 12 acuerdos a favor de la
+            Conoce y hazle seguimiento a los 12 compromisos a favor de la
             democracia que asumió el presidente Pedro Castillo
           </Styled.Subtitle>
           <Styled.EventTitle>
-            ¿Qué ha hecho el Presidente con los acuerdos?
+            ¿Qué ha hecho el Presidente con los compromisos?
           </Styled.EventTitle>
           <Styled.EventSubtitle>
             Revisemos el historial de sus declaraciones que han ido a favor o en
-            contra de alguno de los acuerdos.
+            contra de alguno de los compromisos.
           </Styled.EventSubtitle>
           <Styled.EventList>
             {events?.map(
@@ -84,7 +84,7 @@ export default function Home(props) {
               ),
             )}
           </Styled.EventList>
-          <Styled.AgreementTitle>Lista de Acuerdos</Styled.AgreementTitle>
+          <Styled.AgreementTitle>Lista de Compromisos</Styled.AgreementTitle>
           <Styled.List
             breakpointCols={{
               default: 3,
@@ -122,7 +122,7 @@ export default function Home(props) {
               />
             </Styled.ImageDownload>
             <Styled.TextLink href="https://drive.google.com/drive/folders/1hFH0XfkHCktmDQkuuRXICPa_FgcsGaA_">
-              Descarga y comparte los acuerdos
+              Descarga y comparte los compromisos
             </Styled.TextLink>
           </Styled.Download>
         </Styled.SignatureContainer>

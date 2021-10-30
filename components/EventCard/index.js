@@ -25,7 +25,7 @@ export default function EventCard({
         <div>
           <Styled.Date>{formatDate(date)}</Styled.Date>
           <Styled.HeaderTitle>
-            <b>Acuerdo #{agreementId}:</b> {agreementTitle}
+            <b>Compromiso #{agreementId}:</b> {agreementTitle}
           </Styled.HeaderTitle>
         </div>
         <Styled.Alert status={status}></Styled.Alert>
