@@ -5,7 +5,8 @@ import { statusColor } from 'components/Alert/styles';
 
 const Card = styled('div')`
   background: #ffffff;
-  border: 1px solid ${({ status }) => statusColor[status].border};
+  border: ${({ status }) => (status === 'extreme' ? '2px' : '1px')} solid
+    ${({ status }) => statusColor[status].border};
   border-radius: 4px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
   overflow: auto;
