@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 const statusColor = {
-  risk: { color: '#B68811', bg: '#FEEDC3', border: '#F6E05E' },
-  no: { color: '#C00C0C', bg: '#FCCFCF', border: '#FC8181' },
+  moderate: { color: '#B7791F', bg: '#FEFCBF', border: '#F6E05E' },
+  high: { color: '#C53030', bg: '#FED7D7', border: '#FC8181' },
+  extreme: { color: '#822727', bg: '#FC8181', border: '#FC8181' },
 };
 
 const Message = styled('div')`
