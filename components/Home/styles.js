@@ -118,27 +118,34 @@ export const Organizers = styled('div')`
   font-size: 1rem;
   line-height: 1.4375rem;
   margin: auto;
-  max-width: 31.25rem;
-  padding: 6.25rem 0;
+  max-width: 62.5rem;
+  padding: 3.75rem 0;
   text-align: center;
   @media (max-width: 37.5rem) {
-    padding: 5rem 0;
+    padding-bottom: 1rem;
   }
 `;
 
 export const Boxlogo = styled('div')`
   align-items: center;
   display: flex;
-  justify-content: space-between;
-  margin-top: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.5rem;
   @media (max-width: 37.5rem) {
     flex-direction: column;
-    margin-top: 1rem;
+    margin-top: 2.5rem;
   }
 `;
 
 export const ImageBox = styled('div')`
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
   padding: 0.5rem 0;
+  @media (max-width: 37.5rem) {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
 `;
 
 export const LogoText = styled('p')`

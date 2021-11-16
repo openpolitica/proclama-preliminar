@@ -9,21 +9,68 @@ import EventCard from 'components/EventCard';
 
 const LogoList = () => (
   <Styled.Boxlogo>
-    <Styled.LogoText>Open Política</Styled.LogoText>
     <Styled.ImageBox>
       <Image
-        src="/images/logos/200.svg"
-        width="74"
-        height="74"
-        alt="logo de 200"
+        src="/images/logos/open-politica.svg"
+        width="210"
+        height="44.58"
+        alt="logo de Open Política"
       />
     </Styled.ImageBox>
     <Styled.ImageBox>
       <Image
         src="/images/logos/transparencia.svg"
-        width="156"
-        height="74"
-        alt="logo de transparencia"
+        width="137"
+        height="68.65"
+        alt="logo de Transparencia"
+      />
+    </Styled.ImageBox>
+    <Styled.ImageBox>
+      <Image
+        src="/images/logos/200.svg"
+        width="150"
+        height="62.5"
+        alt="logo de 200"
+      />
+    </Styled.ImageBox>
+    <Styled.ImageBox>
+      <Image
+        src="/images/logos/proetica.svg"
+        width="138"
+        height="68.35"
+        alt="logo de Proética"
+      />
+    </Styled.ImageBox>
+    <Styled.ImageBox>
+      <Image
+        src="/images/logos/cipca.svg"
+        width="85"
+        height="110.41"
+        alt="logo de CIPCA"
+      />
+    </Styled.ImageBox>
+    <Styled.ImageBox>
+      <Image
+        src="/images/logos/pucp.svg"
+        width="210"
+        height="46"
+        alt="logo de PUCP"
+      />
+    </Styled.ImageBox>
+    <Styled.ImageBox>
+      <Image
+        src="/images/logos/foro-educativo.svg"
+        width="154"
+        height="62"
+        alt="logo de Foro Educativo"
+      />
+    </Styled.ImageBox>
+    <Styled.ImageBox>
+      <Image
+        src="/images/logos/internancia.svg"
+        width="98"
+        height="98"
+        alt="logo de Internancia"
       />
     </Styled.ImageBox>
   </Styled.Boxlogo>
@@ -128,7 +175,7 @@ export default function Home(props) {
         </Styled.SignatureContainer>
       </Styled.Signatures>
       <Styled.Organizers>
-        Organizan
+        Promotores
         <LogoList />
       </Styled.Organizers>
       <Footer />
