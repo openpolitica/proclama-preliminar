@@ -8,6 +8,9 @@ export const Footer = styled('footer')`
   line-height: 1.625rem;
   padding: 6.25rem 0;
   text-align: center;
+  @media (max-width: 37.5rem) {
+    padding: 5rem 6rem;
+  }
 `;
 
 export const TextLink = styled('a')`
