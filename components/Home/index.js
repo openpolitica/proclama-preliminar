@@ -84,7 +84,16 @@ export default function Home(props) {
     <Fragment>
       <header>
         <Link href="/">
-          <Styled.Header>#Vigilantes</Styled.Header>
+          <Styled.Header>
+            <Styled.ImageBox header>
+              <Image
+                src="/images/logos/vigilantes.svg"
+                width="208px"
+                height="48px"
+                alt="logo de Vigilantes"
+              />
+            </Styled.ImageBox>
+          </Styled.Header>
         </Link>
       </header>
       <Styled.Container>
