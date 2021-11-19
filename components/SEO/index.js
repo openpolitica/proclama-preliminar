@@ -5,7 +5,7 @@ export default function SEO() {
     title: 'Vigilantes.pe',
     description:
       '12 compromisos esenciales que asumió el presidente Pedro Castillo mediante la proclama ciudadana. Promovido por la Asociación Civil Transparencia.',
-    image: 'https://proclamaciudadana.pe/images/banner.png',
+    image: 'https://vigilantes.pe/images/banner.png',
     type: 'website',
   };
 
