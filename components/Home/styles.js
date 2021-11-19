@@ -13,10 +13,10 @@ export const Header = styled('h1')`
   color: #4e4a49;
   font-size: 1.375rem;
   font-weight: bold;
-  line-height: 2rem;
+  line-height: 1rem;
   margin: 0;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
   text-align: center;
 `;
 
@@ -144,7 +144,7 @@ export const ImageBox = styled('div')`
   padding: 0.5rem 0;
   @media (max-width: 37.5rem) {
     flex-direction: column;
-    margin-bottom: 1rem;
+    margin-bottom: ${props => (props.header ? 0 : '1rem')};
   }
 `;
 
