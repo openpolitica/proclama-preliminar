@@ -37,7 +37,7 @@ function MyOPApp({ Component, pageProps }) {
           href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
           rel="stylesheet"
         />
-        <title>Proclama ciudadana 2021</title>
+        <title>Plataforma vigilantes</title>
       </Head>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
