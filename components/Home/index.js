@@ -147,12 +147,11 @@ export default function Home(props) {
       <Styled.Container>
         <Styled.Main>
           <Styled.Title>
-            <Styled.Emphasis>12 compromisos</Styled.Emphasis> esenciales que
-            asumió el presidente Pedro Castillo mediante la proclama ciudadana
+            <Styled.Emphasis>12 compromisos</Styled.Emphasis> por la democracia
+            que asumió el presidente Pedro Castillo
           </Styled.Title>
           <Styled.Subtitle>
-            Conoce y hazle seguimiento a los 12 compromisos a favor de la
-            democracia que asumió el presidente Pedro Castillo
+            Conoce y hazle seguimiento a los 12 compromisos y sus indicadores
           </Styled.Subtitle>
           <Styled.EventTitle>
             ¿Qué ha hecho el Presidente con los compromisos?
