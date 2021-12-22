@@ -51,7 +51,7 @@ const LogoList = () => (
     </Styled.ImageBox>
     <Styled.ImageBox>
       <Image
-        src="/images/logos/impulso-pais.svg"
+        src="/images/logos/logito_copia.svg"
         width="131"
         height="65"
         alt="logo de impulso"
