@@ -1,19 +1,17 @@
 import { useState } from 'react';
-import { Card, Number, Title, Description, SeeMore } from './styles';
-import Alert from 'components/Alert';
+import Link from 'next/link';
+import { Card, Number, Title, SeeMore } from './styles';
 
-export default function AgreementCard({ id, title, description, status }) {
-  const [expanded, setExpanded] = useState(false);
+export default function AgreementCard({ id, title }) {
+  const [expanded] = useState(false);
 
   return (
     <Card expanded={expanded}>
       <Number>{id}</Number>
       <Title>{title}</Title>
-      {status ? <Alert status={status} /> : null}
-      <Description expanded={expanded}>{description}</Description>
-      <SeeMore onClick={() => setExpanded(prev => !prev)}>
-        {expanded ? 'Leer menos' : 'Leer más'}
-      </SeeMore>
+      <Link href={`agreements/${id}`}>
+        <SeeMore>Leer más</SeeMore>
+      </Link>
     </Card>
   );
 }

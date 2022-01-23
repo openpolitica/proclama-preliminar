@@ -8,19 +8,14 @@ const Card = styled('div')`
   overflow: hidden;
   padding: 1rem 1.5rem 3rem;
   position: relative;
-  transition: max-height 300ms cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: max-height;
 
   @media (min-width: 37.5rem) {
-    max-height: ${({ expanded }) => (expanded ? 'unset' : '323px')};
+    max-height: unset;
     ::after {
-      background: ${({ expanded }) =>
-        expanded
-          ? '#ffffff'
-          : 'linear-gradient(180deg,rgba(255, 255, 255, 0) 50%,#ffffff 80%)'};
+      background: #ffffff;
       bottom: 0;
       content: '';
-      display: ${({ expanded }) => (expanded ? 'none' : 'block')};
+      display: none;
       left: 0;
       position: absolute;
       right: 0;
