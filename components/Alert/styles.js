@@ -1,9 +1,14 @@
 import styled from 'styled-components';
 
 const statusColor = {
-  moderate: { color: '#B7791F', bg: '#FEFCBF', border: '#F6E05E' },
-  high: { color: '#C53030', bg: '#FED7D7', border: '#FC8181' },
-  extreme: { color: '#822727', bg: '#FC8181', border: '#E53E3E' },
+  null: {
+    color: 'rgba(0, 0, 0, 0.92)',
+    bg: 'rgba(0, 0, 0, 0.08)',
+    border: 'transparent',
+  },
+  moderate: { color: '#5F370E', bg: '#F6E05E', border: '#ECC94B' },
+  high: { color: '#652B19', bg: '#F6AD55', border: '#ED8936' },
+  extreme: { color: '#63171B', bg: '#F56565', border: '#F56565' },
 };
 
 const Message = styled('div')`
