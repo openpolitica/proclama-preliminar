@@ -36,15 +36,6 @@ const Title = styled('h2')`
   margin-bottom: 0.75rem;
   margin-top: 0.75rem;
 `;
-const Description = styled('p')`
-  color: #808080;
-  margin-bottom: 0.75rem;
-  margin-top: 0.75rem;
-
-  @media (max-width: 37.5rem) {
-    display: ${({ expanded }) => (expanded ? 'block' : 'none')};
-  }
-`;
 
 const SeeMore = styled('button')`
   background-color: transparent;
@@ -60,4 +51,4 @@ const SeeMore = styled('button')`
   z-index: 1;
 `;
 
-export { Card, Title, Number, Description, SeeMore };
+export { Card, Title, Number, SeeMore };
