@@ -13,7 +13,7 @@ const EventsSchema = new Schema({
     type: String,
     required: true,
   },
-  agreement_id: {
+  indicator_id: {
     type: Number,
     required: true,
   },

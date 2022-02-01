@@ -1,24 +1,20 @@
 import { Schema, model, models } from 'mongoose';
 
-const AgreementsSchema = new Schema({
+const IndicatorsSchema = new Schema({
   id: {
     type: Number,
-    required: true,
-  },
-  title: {
-    type: String,
     required: true,
   },
   description: {
     type: String,
     required: true,
   },
-  indicators: {
+  events: {
     type: [Schema.Types.ObjectId],
-    ref: 'indicators',
+    ref: 'events',
     default: [],
   },
 });
 
-export default models.agreements ||
-  model('agreements', AgreementsSchema, 'agreements');
+export default models.indicators ||
+  model('indicators', IndicatorsSchema, 'indicators');
