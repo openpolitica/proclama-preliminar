@@ -1,14 +1,14 @@
 import { connectToDatabase } from 'util/mongodb';
-import AgreementsSchema from 'models/Agreements';
+import IndicatorsSchema from 'models/Indicators';
 
-export const getAgreementsOnly = async () => {
+export const getIndicatorsOnly = async () => {
   await connectToDatabase();
-  return await AgreementsSchema.find({}).sort({ id: 1 });
+  return await IndicatorsSchema.find({}).sort({ id: 1 });
 };
 
-export const getAgreements = async () => {
+export const getIndicators = async () => {
   await connectToDatabase();
-  return await AgreementsSchema.find({}).sort({ id: 1 }).populate('indicators');
+  return await IndicatorsSchema.find({}).sort({ id: 1 }).populate('events');
 };
 
 export default async (req, res) => {
@@ -19,10 +19,10 @@ export default async (req, res) => {
   switch (method) {
     case 'GET':
       try {
-        const agreements = await AgreementsSchema.find({})
+        const indicators = await IndicatorsSchema.find({})
           .sort({ id: 1 })
-          .populate('indicators');
-        res.status(200).json({ success: true, data: agreements });
+          .populate('events');
+        res.status(200).json({ success: true, data: indicators });
       } catch (error) {
         res.status(400).json({ success: false, message: error.toString() });
       }
