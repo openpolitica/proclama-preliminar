@@ -194,13 +194,12 @@ export default function Home(props) {
               900: 2,
               600: 1,
             }}>
-            {agreements?.map(({ id, title, description, events }) => (
+            {agreements?.map(({ id, title, description }) => (
               <AgreementCard
                 key={id}
                 id={id}
                 title={title}
                 description={description}
-                status={events[events.length - 1]?.status}
               />
             ))}
           </Styled.List>
