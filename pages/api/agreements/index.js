@@ -1,4 +1,5 @@
 import { connectToDatabase } from 'util/mongodb';
+import 'models/Indicators'; //required to populate indicators
 import AgreementsSchema from 'models/Agreements';
 
 export const getAgreementsOnly = async () => {
