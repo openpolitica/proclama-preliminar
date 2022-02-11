@@ -1,126 +1,127 @@
 import * as Styled from './styles';
 import { Fragment } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
-import Footer from 'components/Footer';
+import BasePage from 'components/BasePage';
+import ImageBox from 'components/ImageBox';
+import MainContent from 'components/MainContent';
 import AgreementCard from 'components/AgreementCard';
 import SignatureCount from 'components/SignatureCount';
 import EventCard from 'components/EventCard';
 
 const LogoList = () => (
   <Styled.Boxlogo>
-    <Styled.ImageBox>
+    <ImageBox>
       <Image
         src="/images/logos/open-politica.svg"
         width="200"
         height="43"
         alt="logo de Open Política"
       />
-    </Styled.ImageBox>
-    <Styled.ImageBox>
+    </ImageBox>
+    <ImageBox>
       <Image
         src="/images/logos/transparencia.svg"
         width="130"
         height="65"
         alt="logo de Transparencia"
       />
-    </Styled.ImageBox>
-    <Styled.ImageBox>
+    </ImageBox>
+    <ImageBox>
       <Image
         src="/images/logos/200.svg"
         width="142"
         height="59"
         alt="logo de 200"
       />
-    </Styled.ImageBox>
-    <Styled.ImageBox>
+    </ImageBox>
+    <ImageBox>
       <Image
         src="/images/logos/cpp.svg"
         width="124"
         height="68"
         alt="logo de consejo de la prensa peruana"
       />
-    </Styled.ImageBox>
-    <Styled.ImageBox>
+    </ImageBox>
+    <ImageBox>
       <Image
         src="/images/logos/UPCH.svg"
         width="138"
         height="61"
         alt="logo de universidad peruana cayetano heredia"
       />
-    </Styled.ImageBox>
-    <Styled.ImageBox>
+    </ImageBox>
+    <ImageBox>
       <Image
         src="/images/logos/logito_copia.svg"
         width="131"
         height="65"
         alt="logo de impulso"
       />
-    </Styled.ImageBox>
-    <Styled.ImageBox>
+    </ImageBox>
+    <ImageBox>
       <Image
         src="/images/logos/IBC.svg"
         width="151"
         height="56"
         alt="logo de instituto bartolomé de las casas"
       />
-    </Styled.ImageBox>
-    <Styled.ImageBox>
+    </ImageBox>
+    <ImageBox>
       <Image
         src="/images/logos/internancia.svg"
         width="98"
         height="98"
         alt="logo de Internancia"
       />
-    </Styled.ImageBox>
-    <Styled.ImageBox>
+    </ImageBox>
+    <ImageBox>
       <Image
         src="/images/logos/perspectiva.svg"
         width="154"
         height="56"
         alt="logo de perspectiva constitucional"
       />
-    </Styled.ImageBox>
-    <Styled.ImageBox>
+    </ImageBox>
+    <ImageBox>
       <Image
         src="/images/logos/cipca.svg"
         width="81"
         height="104"
         alt="logo de cipca"
       />
-    </Styled.ImageBox>
-    <Styled.ImageBox>
+    </ImageBox>
+    <ImageBox>
       <Image
         src="/images/logos/pucp.svg"
         width="198"
         height="43"
         alt="logo de PUCP"
       />
-    </Styled.ImageBox>
-    <Styled.ImageBox>
+    </ImageBox>
+    <ImageBox>
       <Image
         src="/images/logos/ipae.svg"
         width="151"
         height="56"
         alt="logo de Ipae"
       />
-    </Styled.ImageBox>
-    <Styled.ImageBox>
+    </ImageBox>
+    <ImageBox>
       <Image
         src="/images/logos/foro-educativo.svg"
         width="145"
         height="58"
         alt="logo de Foro Educativo"
       />
-    </Styled.ImageBox>
-    <Styled.ImageBox>
+    </ImageBox>
+    <ImageBox>
       <Image
         src="/images/logos/proetica.svg"
         width="131"
         height="64"
         alt="logo de Proética"
       />
-    </Styled.ImageBox>
+    </ImageBox>
   </Styled.Boxlogo>
 );
 
@@ -130,22 +131,8 @@ export default function Home(props) {
 
   return (
     <Fragment>
-      <header>
-        <Link href="/">
-          <Styled.Header>
-            <Styled.ImageBox header>
-              <Image
-                src="/images/logos/vigilantes.svg"
-                width="208px"
-                height="48px"
-                alt="logo de Vigilantes"
-              />
-            </Styled.ImageBox>
-          </Styled.Header>
-        </Link>
-      </header>
-      <Styled.Container>
-        <Styled.Main>
+      <BasePage>
+        <MainContent>
           <Styled.Title>
             <Styled.Emphasis>12 compromisos</Styled.Emphasis> por la democracia
             que asumió el presidente Pedro Castillo
@@ -203,37 +190,36 @@ export default function Home(props) {
               />
             ))}
           </Styled.List>
-        </Styled.Main>
-      </Styled.Container>
-      <Styled.Signatures>
-        <Styled.SignatureContainer>
-          <SignatureCount count={props.signatures} />
-          <Styled.Text>
-            Fuente:{' '}
-            <Styled.TextLink href="https://www.change.org/p/actransparencia-keikofujimori-pedrocastillote-canaln-que-los-candidatos-pedro-castillo-y-keiko-fujimori-firmen-la-siguiente-proclama-ciudadana">
-              change.org
-            </Styled.TextLink>
-          </Styled.Text>
-          <Styled.Download>
-            <Styled.ImageDownload>
-              <Image
-                src="/images/icons/download-icon.svg"
-                width="24"
-                height="24"
-                alt="icono de descarga"
-              />
-            </Styled.ImageDownload>
-            <Styled.TextLink href="https://drive.google.com/drive/folders/1hFH0XfkHCktmDQkuuRXICPa_FgcsGaA_">
-              Descarga y comparte los compromisos
-            </Styled.TextLink>
-          </Styled.Download>
-        </Styled.SignatureContainer>
-      </Styled.Signatures>
-      <Styled.Organizers>
-        Promotores
-        <LogoList />
-      </Styled.Organizers>
-      <Footer />
+        </MainContent>
+        <Styled.Signatures>
+          <Styled.SignatureContainer>
+            <SignatureCount count={props.signatures} />
+            <Styled.Text>
+              Fuente:{' '}
+              <Styled.TextLink href="https://www.change.org/p/actransparencia-keikofujimori-pedrocastillote-canaln-que-los-candidatos-pedro-castillo-y-keiko-fujimori-firmen-la-siguiente-proclama-ciudadana">
+                change.org
+              </Styled.TextLink>
+            </Styled.Text>
+            <Styled.Download>
+              <Styled.ImageDownload>
+                <Image
+                  src="/images/icons/download-icon.svg"
+                  width="24"
+                  height="24"
+                  alt="icono de descarga"
+                />
+              </Styled.ImageDownload>
+              <Styled.TextLink href="https://drive.google.com/drive/folders/1hFH0XfkHCktmDQkuuRXICPa_FgcsGaA_">
+                Descarga y comparte los compromisos
+              </Styled.TextLink>
+            </Styled.Download>
+          </Styled.SignatureContainer>
+        </Styled.Signatures>
+        <Styled.Organizers>
+          Promotores
+          <LogoList />
+        </Styled.Organizers>
+      </BasePage>
     </Fragment>
   );
 }
