@@ -12,9 +12,11 @@ const statusColor = {
 };
 
 const Message = styled('div')`
-  background-color: ${({ status }) => statusColor[status].bg};
+  background-color: ${({ status }) =>
+    status ? statusColor[status].bg : statusColor['null'].bg};
   border-radius: 0.25rem;
-  color: ${({ status }) => statusColor[status].color};
+  color: ${({ status }) =>
+    status ? statusColor[status].color : statusColor['null'].color};
   font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
   margin-bottom: 0.75rem;

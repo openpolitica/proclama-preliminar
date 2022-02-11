@@ -1,5 +1,6 @@
 import { connectToDatabase } from 'util/mongodb';
 import 'models/Indicators'; //required to populate indicators
+import 'models/Events'; //required to populate events
 import AgreementsSchema from 'models/Agreements';
 
 export const getAgreementsOnly = async () => {
@@ -10,6 +11,13 @@ export const getAgreementsOnly = async () => {
 export const getAgreements = async () => {
   await connectToDatabase();
   return await AgreementsSchema.find({}).sort({ id: 1 }).populate('indicators');
+};
+
+export const getAgreementByID = async id => {
+  await connectToDatabase();
+  return await AgreementsSchema.findOne({ id })
+    .populate('indicators')
+    .populate('events');
 };
 
 export default async (req, res) => {

@@ -1,14 +1,7 @@
 import * as Styled from './styles';
-
-const formatDate = date => {
-  const options = {
-    day: 'numeric',
-    year: 'numeric',
-    month: 'long',
-  };
-
-  return new Date(date).toLocaleDateString('ES-pe', options);
-};
+import StatusCard from 'components/StatusCard';
+import HeaderCard from 'components/HeaderCard';
+import FormatDate from 'util/formatDate';
 
 export default function EventCard({
   date,
@@ -20,22 +13,22 @@ export default function EventCard({
   url,
 }) {
   return (
-    <Styled.Card status={status}>
-      <Styled.HeaderCard>
+    <StatusCard status={status}>
+      <HeaderCard>
         <div>
-          <Styled.Date>{formatDate(date)}</Styled.Date>
+          <Styled.Date>{FormatDate(date)}</Styled.Date>
           <Styled.HeaderTitle>
             <b>Compromiso #{agreementId}:</b> {agreementTitle}
           </Styled.HeaderTitle>
         </div>
         <Styled.Alert status={status}></Styled.Alert>
-      </Styled.HeaderCard>
+      </HeaderCard>
       <Styled.Title>{title}</Styled.Title>
       <Styled.Description>{description}</Styled.Description>
       <Styled.SourceLink href={url} target="_blank" rel="noopener noreferrer">
         <Styled.ArrowRight />
         Referencia
       </Styled.SourceLink>
-    </Styled.Card>
+    </StatusCard>
   );
 }
