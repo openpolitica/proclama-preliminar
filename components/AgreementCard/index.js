@@ -6,7 +6,7 @@ export default function AgreementCard({ id, title }) {
     <Card>
       <Number>{id}</Number>
       <Title>{title}</Title>
-      <Link href={`agreements/${id}`}>
+      <Link href={`compromiso/${id}`}>
         <SeeMore>Leer más</SeeMore>
       </Link>
     </Card>
