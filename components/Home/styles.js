@@ -1,34 +1,6 @@
 import styled from 'styled-components';
 import Masonry from 'react-masonry-css';
 
-export const Container = styled('div')`
-  @media (max-width: 58.75rem) {
-    padding: 0 1.5rem;
-  }
-`;
-
-export const Header = styled('h1')`
-  background-color: rgba(255, 255, 255, 0.6);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  color: #4e4a49;
-  font-size: 1.375rem;
-  font-weight: bold;
-  line-height: 1rem;
-  margin: 0;
-  padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
-  text-align: center;
-`;
-
-export const Main = styled('main')`
-  margin: auto;
-  max-width: 58.75rem;
-  padding: 3.875rem 0 6.25rem;
-  @media (max-width: 58.75rem) {
-    padding-top: 1.25rem;
-  }
-`;
-
 export const Title = styled('h1')`
   color: #4e4a49;
   font-size: 2rem;
@@ -135,16 +107,6 @@ export const Boxlogo = styled('div')`
   @media (max-width: 37.5rem) {
     flex-direction: column;
     margin-top: 2.5rem;
-  }
-`;
-
-export const ImageBox = styled('div')`
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-  padding: 0.5rem 0;
-  @media (max-width: 37.5rem) {
-    flex-direction: column;
-    margin-bottom: ${props => (props.header ? 0 : '1rem')};
   }
 `;
 
