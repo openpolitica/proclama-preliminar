@@ -1,4 +1,13 @@
 module.exports = {
+  async redirects() {
+    return [
+      {
+        source: '/compromiso',
+        destination: '/',
+        permanent: true,
+      },
+    ];
+  },
   webpack(config, { isServer }) {
     if (isServer) {
       require('./scripts/optimize-svg');
