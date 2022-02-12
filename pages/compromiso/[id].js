@@ -1,12 +1,22 @@
 import Agreement from 'components/AgreementPage';
-import { getAgreementByID } from 'pages/api/agreements';
+import { getAgreementByID, getAgreementsCount } from 'pages/api/agreements';
 
 export async function getServerSideProps({ params }) {
-  const agreementInfo = await getAgreementByID(params.id);
+  const agreementsCount = await getAgreementsCount();
+  if (!isNaN(params.id) && params.id > 0 && params.id <= agreementsCount) {
+    const agreementInfo = await getAgreementByID(params.id);
+    return {
+      props: {
+        page: params.id,
+        agreementsCount: agreementsCount,
+        agreementInfo: JSON.parse(JSON.stringify(agreementInfo)),
+        indicatorsCount: agreementInfo?.indicators.length,
+      },
+    };
+  }
   return {
     props: {
-      agreementInfo: JSON.parse(JSON.stringify(agreementInfo)),
-      indicatorsCount: agreementInfo?.indicators.length,
+      page: null,
     },
   };
 }

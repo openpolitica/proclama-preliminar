@@ -8,6 +8,11 @@ export const getAgreementsOnly = async () => {
   return await AgreementsSchema.find({}).sort({ id: 1 });
 };
 
+export const getAgreementsCount = async () => {
+  await connectToDatabase();
+  return await AgreementsSchema.find({}).count();
+};
+
 export const getAgreements = async () => {
   await connectToDatabase();
   return await AgreementsSchema.find({}).sort({ id: 1 }).populate('indicators');
