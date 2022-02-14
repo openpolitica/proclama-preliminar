@@ -51,8 +51,10 @@ const Alert = styled(AlertBase)`
 `;
 
 const AlertBox = styled('div')`
-  align-items: flex-start;
+  align-items: center;
   display: flex;
+  font-size: 0.875rem;
+  justify-content: space-between;
 `;
 
 const ArrowRight = styled(ArrowRightIcon)`

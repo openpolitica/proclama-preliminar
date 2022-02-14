@@ -42,12 +42,13 @@ export default function Agreement(props) {
         </Styled.Counter>
         <Styled.IndicatorList>
           {info?.indicators.map(
-            ({ _id, indicator_id, title, description, events }) => {
+            ({ _id, indicator_id, description, events }) => {
               const lastEvent = events[0];
               return (
                 <IndicatorCard
                   key={_id}
                   id={`indicador_${indicator_id}`}
+                  date={lastEvent?.created_At}
                   indicatorId={indicator_id}
                   indicatorDescription={description}
                   eventDescription={lastEvent?.description}
