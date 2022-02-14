@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const HeaderCard = styled('div')`
   align-items: flex-end;
-  ${props => props.underline && 'border-bottom: 1px solid #e5e5e5;'}
+  ${props => props.underline && 'border-bottom: 1px solid rgba(0, 0, 0, 0.08);'}
 
   display: flex;
   font-family: Inter;
