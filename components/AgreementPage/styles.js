@@ -41,3 +41,12 @@ export const PrevButton = styled(NavButton)`
 `;
 
 export const NextButton = styled(NavButton)``;
+
+export const Counter = styled('p')`
+  color: rgba(0, 0, 0, 0.8);
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+`;

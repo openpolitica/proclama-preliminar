@@ -4,31 +4,41 @@ import { Fragment } from 'react';
 
 export default function IndicatorCard({
   indicatorDescription,
+  indicatorId,
   eventDescription,
+  eventTitle,
   status,
   source,
   sourceUrl,
+  ...props
 }) {
   return (
-    <StatusCard status={status}>
-      <Styled.Header underline={status ? true : false}>
+    <StatusCard status={status} {...props}>
+      <Styled.Header underline={!!status}>
         <Styled.AlertBox>
           <Styled.Alert status={status}></Styled.Alert>
         </Styled.AlertBox>
         <div>
-          <Styled.Label>Indicador</Styled.Label>
+          <Styled.Label>Indicador {indicatorId}</Styled.Label>
           <Styled.HeaderTitle>{indicatorDescription}</Styled.HeaderTitle>
         </div>
       </Styled.Header>
       {eventDescription && (
         <Fragment>
-          <Styled.Label>¿Qué pasó?</Styled.Label>
-          <Styled.Description>{eventDescription}</Styled.Description>
-          <Styled.Source to={sourceUrl}>
-            <Styled.ArrowRight />
-            <strong>Fuente </strong>
-            {source}
-          </Styled.Source>
+          <Styled.Label>¿Cómo vamos?</Styled.Label>
+          {eventTitle && <Styled.EventTitle> {eventTitle} </Styled.EventTitle>}
+          <Styled.Description underline={!!source}>
+            {eventDescription}
+          </Styled.Description>
+          {source && (
+            <Styled.Source to={sourceUrl}>
+              <Styled.Icon>
+                <Styled.ArrowRight />
+              </Styled.Icon>
+              <Styled.SourceLabel>Fuente</Styled.SourceLabel>
+              {source}
+            </Styled.Source>
+          )}
         </Fragment>
       )}
     </StatusCard>

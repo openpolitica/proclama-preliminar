@@ -1,12 +1,12 @@
-const Link = ({ to, children }) => {
+const Link = ({ to, children, ...props }) => {
   if (to) {
     return (
-      <a href={to} target="_blank" rel="noopener noreferrer">
+      <a href={to} target="_blank" rel="noopener noreferrer" {...props}>
         {children}
       </a>
     );
   }
-  return <div>{children}</div>;
+  return <div {...props}>{children}</div>;
 };
 
 export default Link;

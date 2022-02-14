@@ -36,21 +36,28 @@ export default function Agreement(props) {
             to={`/compromiso/${+page + 1}`}
           />
         </Styled.TitleBox>
-        <strong>Número de indicadores:</strong> {}
-        {props.indicatorsCount}
+        <Styled.Counter>
+          <strong>Número de indicadores:</strong> {}
+          {props.indicatorsCount}
+        </Styled.Counter>
         <Styled.IndicatorList>
-          {info?.indicators.map(({ _id, description, events }) => {
-            const lastEvent = events[0];
-            return (
-              <IndicatorCard
-                key={_id}
-                indicatorDescription={description}
-                eventDescription={lastEvent?.description}
-                status={lastEvent?.status}
-                source={lastEvent?.data_source}
-                sourceUrl={lastEvent?.source_url}></IndicatorCard>
-            );
-          })}
+          {info?.indicators.map(
+            ({ _id, indicator_id, title, description, events }) => {
+              const lastEvent = events[0];
+              return (
+                <IndicatorCard
+                  key={_id}
+                  id={`indicador_${indicator_id}`}
+                  indicatorId={indicator_id}
+                  indicatorDescription={description}
+                  eventDescription={lastEvent?.description}
+                  eventTitle={lastEvent?.title}
+                  status={lastEvent?.status}
+                  source={lastEvent?.data_source}
+                  sourceUrl={lastEvent?.data_source_url}></IndicatorCard>
+              );
+            },
+          )}
         </Styled.IndicatorList>
       </MainContent>
     </BasePage>

@@ -20,9 +20,12 @@ export const getAgreements = async () => {
 
 export const getAgreementByID = async id => {
   await connectToDatabase();
-  return await AgreementsSchema.findOne({ id })
-    .populate('indicators')
-    .populate('events');
+  return await AgreementsSchema.findOne({ id }).populate({
+    path: 'indicators',
+    populate: {
+      path: 'events',
+    },
+  });
 };
 
 export default async (req, res) => {
