@@ -1,6 +1,6 @@
 import { Message } from './styles';
 
-const statusLabel = {
+export const statusLabel = {
   moderate: 'Alerta moderada',
   null: 'Sin alerta',
   high: 'Alerta grave',

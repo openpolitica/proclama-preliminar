@@ -51,4 +51,11 @@ const SeeMore = styled('button')`
   z-index: 1;
 `;
 
-export { Card, Title, Number, SeeMore };
+const Counterbox = styled('div')`
+  div + div {
+    margin-bottom: 0.375rem;
+    margin-top: 0.375rem;
+  }
+`;
+
+export { Card, Counterbox, Title, Number, SeeMore };

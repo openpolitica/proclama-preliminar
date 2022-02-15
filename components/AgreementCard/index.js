@@ -1,14 +1,22 @@
+import * as Styled from './styles';
 import Link from 'next/link';
-import { Card, Number, Title, SeeMore } from './styles';
+import CounterAlert from 'components/CounterAlert';
 
-export default function AgreementCard({ id, title }) {
+export default function AgreementCard({ id, title, statuses }) {
   return (
-    <Card>
-      <Number>{id}</Number>
-      <Title>{title}</Title>
+    <Styled.Card>
+      <Styled.Number>{id}</Styled.Number>
+      <Styled.Title>{title}</Styled.Title>
+      <Styled.Counterbox>
+        {statuses.map(({ status, count }, i) => {
+          if (status !== 'null') {
+            return <CounterAlert key={i} status={status} count={count} />;
+          }
+        })}
+      </Styled.Counterbox>
       <Link href={`compromiso/${id}`}>
-        <SeeMore>Leer más</SeeMore>
+        <Styled.SeeMore>Leer más</Styled.SeeMore>
       </Link>
-    </Card>
+    </Styled.Card>
   );
 }
