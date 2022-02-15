@@ -74,53 +74,34 @@ export const getStatusCounters = async () => {
       },
     },
     {
-      $group: {
-        _id: '$agreement_id',
-        indicators_count: { $sum: 1 },
-        statuses: { $push: '$last_status' },
-      },
-    },
-    {
-      $project: {
-        _id: 1,
-        indicators_count: 1,
-        moderate: {
-          $size: {
-            $filter: {
-              input: '$statuses',
-              as: 'item',
-              cond: { $eq: ['$$item', 'moderate'] },
-            },
-          },
-        },
-        high: {
-          $size: {
-            $filter: {
-              input: '$statuses',
-              as: 'item',
-              cond: { $eq: ['$$item', 'high'] },
-            },
-          },
-        },
-        extreme: {
-          $size: {
-            $filter: {
-              input: '$statuses',
-              as: 'item',
-              cond: { $eq: ['$$item', 'extreme'] },
-            },
-          },
-        },
-      },
-    },
-    {
       $set: {
-        null: {
-          $subtract: [
-            '$indicators_count',
-            { $add: ['$moderate', '$high', '$extreme'] },
-          ],
+        last_status: {
+          $cond: {
+            if: {
+              $eq: ['$last_status', null],
+            },
+            then: 'null',
+            else: '$last_status',
+          },
         },
+      },
+    },
+    {
+      $group: {
+        _id: { agreement: '$agreement_id', status: '$last_status' },
+        count: { $sum: 1 },
+      },
+    },
+    {
+      $group: {
+        _id: '$_id.agreement',
+        statuses: {
+          $push: {
+            status: '$_id.status',
+            count: '$count',
+          },
+        },
+        indicators_count: { $sum: '$count' },
       },
     },
     {
