@@ -7,6 +7,7 @@ export const HeaderCard = styled('div')`
   display: flex;
   font-family: Inter;
   justify-content: space-between;
+  margin-bottom: ${props => (props.underline ? 1 : 0)}rem;
   padding-bottom: ${props => (props.underline ? 1.5 : 0)}rem;
   @media (max-width: 58.75rem) {
     flex-direction: column;

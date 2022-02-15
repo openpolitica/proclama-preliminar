@@ -23,7 +23,7 @@ export default function EventCard({
         </div>
         <Styled.Alert status={status}></Styled.Alert>
       </HeaderCard>
-      <Styled.Title>{title}</Styled.Title>
+      {title && <Styled.Title>{title}</Styled.Title>}
       <Styled.Description>{description}</Styled.Description>
       <Styled.SourceLink href={url} target="_blank" rel="noopener noreferrer">
         <Styled.ArrowRight />
