@@ -18,7 +18,7 @@ const Title = styled('h3')`
   font-weight: 400;
   margin: 0;
   margin-bottom: 0.25rem;
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
 `;
 
 const Description = styled('p')`

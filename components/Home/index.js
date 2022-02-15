@@ -152,6 +152,7 @@ export default function Home(props) {
               ({
                 _id,
                 agreement_id,
+                agreement_title,
                 title,
                 description,
                 created_At,
@@ -162,10 +163,7 @@ export default function Home(props) {
                   key={_id}
                   date={created_At}
                   agreementId={agreement_id}
-                  agreementTitle={
-                    agreements.find(element => element.id === agreement_id)
-                      .title
-                  }
+                  agreementTitle={agreement_title}
                   title={title}
                   description={description}
                   url={data_source}

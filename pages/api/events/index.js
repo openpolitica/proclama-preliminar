@@ -20,6 +20,56 @@ export const getEvents = async () => {
   return events;
 };
 
+export const getLastEvents = async limit => {
+  await connectToDatabase();
+
+  const events = await EventsSchema.aggregate([
+    {
+      $sort: { created_At: -1 },
+    },
+    {
+      $limit: limit,
+    },
+    {
+      $lookup: {
+        from: 'indicators',
+        localField: 'indicator_id',
+        foreignField: 'indicator_id',
+        as: 'indicator',
+      },
+    },
+    {
+      $replaceRoot: {
+        newRoot: {
+          $mergeObjects: [{ $arrayElemAt: ['$indicator', 0] }, '$$ROOT'],
+        },
+      },
+    },
+    {
+      $project: { indicator: 0, events: 0 },
+    },
+    {
+      $lookup: {
+        from: 'agreements',
+        localField: 'agreement_id',
+        foreignField: 'id',
+        as: 'agreement',
+      },
+    },
+    {
+      $set: {
+        agreement_title: { $arrayElemAt: ['$agreement.title', 0] },
+        agreement_description: { $arrayElemAt: ['$agreement.description', 0] },
+      },
+    },
+    {
+      $project: { agreement: 0 },
+    },
+  ]);
+
+  return events;
+};
+
 export default withSession(async (req, res) => {
   const { method, body } = req;
 
