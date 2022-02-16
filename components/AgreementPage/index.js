@@ -3,7 +3,6 @@ import React from 'react';
 import Router from 'next/router';
 import ErrorPage from 'next/error';
 import BasePage from 'components/BasePage';
-import MainContent from 'components/MainContent';
 import IndicatorCard from 'components/IndicatorCard';
 
 export default function Agreement(props) {
@@ -21,7 +20,7 @@ export default function Agreement(props) {
   const maxPage = props.agreementsCount;
   return (
     <BasePage>
-      <MainContent>
+      <Styled.Content>
         <Styled.TitleBox>
           <Styled.PrevButton
             disabled={+page === 1}
@@ -60,7 +59,7 @@ export default function Agreement(props) {
             },
           )}
         </Styled.IndicatorList>
-      </MainContent>
+      </Styled.Content>
     </BasePage>
   );
 }

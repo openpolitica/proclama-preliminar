@@ -91,7 +91,7 @@ export const Organizers = styled('div')`
   line-height: 1.4375rem;
   margin: auto;
   max-width: 62.5rem;
-  padding: 3.75rem 0;
+  padding: 2.5rem 0;
   text-align: center;
   @media (max-width: 37.5rem) {
     padding-bottom: 1rem;
