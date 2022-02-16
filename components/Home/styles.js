@@ -129,7 +129,7 @@ export const EventTitle = styled(Title)`
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 2.25rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
   margin-top: 4.25rem;
   @media (max-width: 58.75rem) {
     margin-top: 3.75rem;
@@ -143,7 +143,7 @@ export const EventSubtitle = styled(Subtitle)`
 export const EventList = styled('div')`
   margin-bottom: 1.5rem;
   div + div {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
   }
   @media (max-width: 58.75rem) {
     margin-bottom: 3.75rem;

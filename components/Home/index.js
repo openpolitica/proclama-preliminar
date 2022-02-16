@@ -134,13 +134,15 @@ export default function Home(props) {
       <BasePage>
         <MainContent>
           <Styled.Title>
-            <Styled.Emphasis>12 compromisos</Styled.Emphasis> por la democracia
-            que asumió el presidente Pedro Castillo
+            <Styled.Emphasis>12 compromisos</Styled.Emphasis> esenciales que
+            asumió el presidente Pedro Castillo
           </Styled.Title>
           <Styled.Subtitle>
             Conoce y hazle seguimiento a los 12 compromisos y sus indicadores
           </Styled.Subtitle>
-          <Styled.AgreementTitle>Lista de Compromisos</Styled.AgreementTitle>
+          <Styled.AgreementTitle>
+            Estado del cumplimiento de los compromisos
+          </Styled.AgreementTitle>
           <Styled.List
             breakpointCols={{
               default: 3,
@@ -157,13 +159,7 @@ export default function Home(props) {
               />
             ))}
           </Styled.List>
-          <Styled.EventTitle>
-            ¿Qué ha hecho el Presidente con los compromisos?
-          </Styled.EventTitle>
-          <Styled.EventSubtitle>
-            Revisemos el historial de sus declaraciones que han ido a favor o en
-            contra de alguno de los compromisos.
-          </Styled.EventSubtitle>
+          <Styled.EventTitle>Últimas actualizaciones</Styled.EventTitle>
           <Styled.EventList>
             {events?.map(
               ({

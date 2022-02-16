@@ -15,7 +15,7 @@ export default function AgreementCard({ id, title, statuses }) {
         })}
       </Styled.Counterbox>
       <Link href={`compromiso/${id}`}>
-        <Styled.SeeMore>Leer más</Styled.SeeMore>
+        <Styled.SeeMore>Ver más</Styled.SeeMore>
       </Link>
     </Styled.Card>
   );
