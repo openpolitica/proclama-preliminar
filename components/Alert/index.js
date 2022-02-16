@@ -1,4 +1,5 @@
-import { Message } from './styles';
+import * as Styled from './styles';
+import EyeIcon from 'components/EyeIcon';
 
 export const statusLabel = {
   moderate: 'Alerta moderada',
@@ -8,8 +9,11 @@ export const statusLabel = {
 };
 export default function Alert({ status, ...props }) {
   return (
-    <Message status={status} role="alert" {...props}>
-      {status ? statusLabel[status] : statusLabel['null']}
-    </Message>
+    <Styled.Message status={status} role="alert" {...props}>
+      <EyeIcon />
+      <Styled.Text>
+        {status ? statusLabel[status] : statusLabel['null']}
+      </Styled.Text>
+    </Styled.Message>
   );
 }
