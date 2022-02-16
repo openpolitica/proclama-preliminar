@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import Masonry from 'react-masonry-css';
 
 export const Title = styled('h1')`
-  color: #4e4a49;
-  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.92);
+  font-size: 1.875rem;
   font-weight: normal;
   line-height: 2.5rem;
   margin: 0;
@@ -24,7 +24,7 @@ export const Subtitle = styled('p')`
   font-size: 1.125rem;
   line-height: 1.75rem;
   margin: 0;
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   text-align: center;
   @media (max-width: 58.75rem) {
     margin-top: 1.125rem;
@@ -125,9 +125,12 @@ export const List = styled(Masonry)`
 `;
 
 export const EventTitle = styled(Title)`
-  font-size: 1.75rem;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 2.25rem;
   margin-bottom: 0.5rem;
-  margin-top: 6.25rem;
+  margin-top: 4.25rem;
   @media (max-width: 58.75rem) {
     margin-top: 3.75rem;
   }
@@ -138,7 +141,7 @@ export const EventSubtitle = styled(Subtitle)`
   margin-top: 0.5rem;
 `;
 export const EventList = styled('div')`
-  margin-bottom: 6.25rem;
+  margin-bottom: 1.5rem;
   div + div {
     margin-top: 1rem;
   }
@@ -147,7 +150,8 @@ export const EventList = styled('div')`
   }
 `;
 export const AgreementTitle = styled(Title)`
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
+  margin-top: 3rem;
 `;
