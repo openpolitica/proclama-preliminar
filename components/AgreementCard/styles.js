@@ -24,12 +24,12 @@ const Card = styled('div')`
   }
 `;
 const Number = styled('span')`
-  color: #808080;
+  color: rgba(0, 0, 0, 0.64);
   font-size: 1.5rem;
   font-weight: bold;
 `;
 const Title = styled('h2')`
-  color: #4e4a49;
+  color: rgba(0, 0, 0, 0.92);
   font-size: 1.25rem;
   font-weight: bold;
   margin: 0;
@@ -44,6 +44,7 @@ const SeeMore = styled('button')`
   color: #808080;
   cursor: pointer;
   font-family: inherit;
+  font-family: Inter;
   font-size: 1rem;
   padding: 0;
   position: absolute;
