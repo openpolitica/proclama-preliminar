@@ -25,7 +25,10 @@ export const getLastEvents = async limit => {
 
   const events = await EventsSchema.aggregate([
     {
-      $sort: { created_At: -1 },
+      $sort: { created_At: -1, indicator_id: 1 },
+    },
+    {
+      $match: { status: { $ne: 'null' } },
     },
     {
       $limit: limit,
