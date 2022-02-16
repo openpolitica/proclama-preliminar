@@ -1,7 +1,7 @@
 import * as Styled from './styles.js';
-import { Fragment } from 'react';
 import { statusLabel } from 'components/Alert';
 import { pluralizeAndCount, pluralize } from 'util/pluralize';
+import EyeIcon from 'components/EyeIcon';
 
 export default function CounterAlert({ status, count, ...props }) {
   let label = statusLabel[status].toLowerCase();
@@ -13,16 +13,17 @@ export default function CounterAlert({ status, count, ...props }) {
   const Content = () => {
     if (status !== 'null') {
       return (
-        <Fragment>
-          <strong>{pluralizeAndCount(count, 'alerta')}</strong>
+        <div>
+          <strong>{pluralizeAndCount(count, 'alerta')} </strong>
           {pluralize(count, label)}
-        </Fragment>
+        </div>
       );
     }
     return pluralizeAndCount(count, label);
   };
   return (
-    <Styled.Container {...props}>
+    <Styled.Container status={status} {...props}>
+      <EyeIcon />
       <Content />
     </Styled.Container>
   );
