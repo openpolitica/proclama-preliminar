@@ -140,6 +140,23 @@ export default function Home(props) {
           <Styled.Subtitle>
             Conoce y hazle seguimiento a los 12 compromisos y sus indicadores
           </Styled.Subtitle>
+          <Styled.AgreementTitle>Lista de Compromisos</Styled.AgreementTitle>
+          <Styled.List
+            breakpointCols={{
+              default: 3,
+              900: 2,
+              600: 1,
+            }}>
+            {agreements?.map(({ id, title, description, statuses }) => (
+              <AgreementCard
+                key={id}
+                id={id}
+                title={title}
+                description={description}
+                statuses={statuses}
+              />
+            ))}
+          </Styled.List>
           <Styled.EventTitle>
             ¿Qué ha hecho el Presidente con los compromisos?
           </Styled.EventTitle>
@@ -172,23 +189,6 @@ export default function Home(props) {
               ),
             )}
           </Styled.EventList>
-          <Styled.AgreementTitle>Lista de Compromisos</Styled.AgreementTitle>
-          <Styled.List
-            breakpointCols={{
-              default: 3,
-              900: 2,
-              600: 1,
-            }}>
-            {agreements?.map(({ id, title, description, statuses }) => (
-              <AgreementCard
-                key={id}
-                id={id}
-                title={title}
-                description={description}
-                statuses={statuses}
-              />
-            ))}
-          </Styled.List>
         </MainContent>
         <Styled.Signatures>
           <Styled.SignatureContainer>
