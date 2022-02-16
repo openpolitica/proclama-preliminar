@@ -29,19 +29,21 @@ const Description = styled('p')`
   margin-bottom: 1rem;
 `;
 
-const SourceLink = styled('a')`
-  align-items: center;
-  color: #4d4d4d;
-  display: flex;
-  text-decoration: underline;
-
-  svg {
-    margin-right: 0.5rem;
-  }
-`;
-
 const Alert = styled(AlertBase)`
   margin: 0;
+`;
+
+const SeeMore = styled('button')`
+  background-color: transparent;
+  border: none;
+  bottom: 1rem;
+  color: #808080;
+  cursor: pointer;
+  font-family: inherit;
+  font-family: Inter;
+  font-size: 1rem;
+  padding: 0;
+  text-decoration: underline;
 `;
 
 const ArrowRight = styled(ArrowRightIcon)`
@@ -49,4 +51,4 @@ const ArrowRight = styled(ArrowRightIcon)`
   width: 1rem;
 `;
 
-export { Alert, Date, HeaderTitle, Title, Description, SourceLink, ArrowRight };
+export { Alert, Date, HeaderTitle, Title, Description, SeeMore, ArrowRight };

@@ -165,21 +165,19 @@ export default function Home(props) {
               ({
                 _id,
                 agreement_id,
-                agreement_title,
+                indicator_id,
                 title,
                 description,
                 created_At,
-                data_source,
                 status,
               }) => (
                 <EventCard
                   key={_id}
                   date={created_At}
                   agreementId={agreement_id}
-                  agreementTitle={agreement_title}
+                  indicatorId={indicator_id}
                   title={title}
                   description={description}
-                  url={data_source}
                   status={status}
                 />
               ),
