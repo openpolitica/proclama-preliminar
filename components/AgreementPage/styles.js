@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 import { EventList } from 'components/Home/styles';
 import NavButton from 'components/NavButton';
+import MainContent from 'components/MainContent';
+
+export const Content = styled(MainContent)`
+  padding-bottom: 2.5rem;
+`;
 
 export const TitleBox = styled('div')`
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);

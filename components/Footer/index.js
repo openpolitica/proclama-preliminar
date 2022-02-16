@@ -8,7 +8,7 @@ const Footer = () => {
         href="https://openpolitica.com/"
         target="_blank"
         rel="noopener noreferrer">
-        Open Política
+        <Styled.OPLogo />
       </Styled.TextLink>
     </Styled.Footer>
   );
