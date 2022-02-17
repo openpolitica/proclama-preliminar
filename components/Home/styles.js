@@ -138,11 +138,20 @@ export const Organizers = styled('div')`
   line-height: 1.4375rem;
   margin: auto;
   max-width: 62.5rem;
-  padding: 2.5rem 0;
+  padding: 7.5rem 0 2.5rem;
   text-align: center;
   @media (max-width: 37.5rem) {
     padding-bottom: 1rem;
   }
+`;
+
+export const OrganizersTitle = styled('h1')`
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
 `;
 
 export const Boxlogo = styled('div')`
