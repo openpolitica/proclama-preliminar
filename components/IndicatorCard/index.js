@@ -2,7 +2,6 @@ import * as Styled from './styles';
 import StatusCard from 'components/StatusCard';
 import { Fragment } from 'react';
 import FormatDate from 'util/formatDate';
-import { Date } from 'components/EventCard/styles';
 
 export default function IndicatorCard({
   indicatorDescription,
@@ -20,7 +19,7 @@ export default function IndicatorCard({
       <Styled.Header underline={!!status}>
         <Styled.AlertBox>
           <Styled.Alert status={status}></Styled.Alert>
-          {date && <Date>{FormatDate(date)}</Date>}
+          {date && <Styled.AlertDate>{FormatDate(date)}</Styled.AlertDate>}
         </Styled.AlertBox>
         <div>
           <Styled.Label>Indicador {indicatorId}</Styled.Label>

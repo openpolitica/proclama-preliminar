@@ -3,6 +3,7 @@ import AlertBase from 'components/Alert';
 import ArrowRightIcon from 'public/images/icons/arrow-right.svg';
 import Link from 'components/Link';
 import HeaderCard from 'components/HeaderCard';
+import { Date } from 'components/EventCard/styles';
 
 const Label = styled('div')`
   color: rgba(0, 0, 0, 0.8);
@@ -11,6 +12,10 @@ const Label = styled('div')`
   font-weight: 600;
   line-height: 1.25rem;
   margin-bottom: 0.5rem;
+`;
+
+const AlertDate = styled(Date)`
+  margin: 0.5rem 0;
 `;
 
 const HeaderTitle = styled('h3')`
@@ -53,6 +58,7 @@ const Alert = styled(AlertBase)`
 const AlertBox = styled('div')`
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   font-size: 0.875rem;
   justify-content: space-between;
 `;
@@ -103,4 +109,5 @@ export {
   Source,
   SourceLabel,
   ArrowRight,
+  AlertDate,
 };
