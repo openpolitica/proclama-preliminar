@@ -8,120 +8,110 @@ import AgreementCard from 'components/AgreementCard';
 import EventCard from 'components/EventCard';
 import DownloadButton from 'components/DownloadButton';
 
+const Logos = [
+  {
+    source: '/images/logos/open-politica.svg',
+    width: 200,
+    height: 43,
+    alternate: 'logo de Open Política',
+    url: 'https://openpolitica.com/',
+  },
+  {
+    source: '/images/logos/transparencia.svg',
+    width: 130,
+    height: 65,
+    alternate: 'logo de Transparencia',
+    url: 'https://www.transparencia.org.pe/',
+  },
+  {
+    source: '/images/logos/cpp.svg',
+    width: 124,
+    height: 68,
+    alternate: 'logo de consejo de la prensa peruana',
+    url: 'http://consejoprensaperuana.org.pe/',
+  },
+  {
+    source: '/images/logos/UPCH.svg',
+    width: 138,
+    height: 61,
+    alternate: 'logo de laboratorio de innovación en Salud - UPCH',
+    url: 'https://investigacion.cayetano.edu.pe/catalogo/biotecnologia/innov-lab',
+  },
+  {
+    source: '/images/logos/logito_copia.svg',
+    width: 131,
+    height: 65,
+    alternate: 'logo de impulso país',
+    url: 'https://impulsopais.pe/',
+  },
+  {
+    source: '/images/logos/IBC.svg',
+    width: 151,
+    height: 56,
+    alternate: 'logo de centro bartolomé de las casas',
+    url: 'https://cbc.org.pe/',
+  },
+  {
+    source: '/images/logos/internancia.svg',
+    width: 98,
+    height: 98,
+    alternate: 'logo de Internancia',
+    url: 'https://www.facebook.com/internacia.pucp/',
+  },
+  {
+    source: '/images/logos/perspectiva.svg',
+    width: 154,
+    height: 56,
+    alternate: 'logo de perspectiva constitucional',
+    url: 'https://www.facebook.com/Perspectiva-Constitucional-851877291597271/',
+  },
+  {
+    source: '/images/logos/cipca.svg',
+    width: 81,
+    height: 104,
+    alternate: 'logo de cipca',
+    url: 'http://www.cipca.org.pe/',
+  },
+  {
+    source: '/images/logos/pucp.svg',
+    width: 198,
+    height: 43,
+    alternate:
+      'logo de grupo interdisciplinado de prospectiva de políticas públicas de la pucp',
+    url: 'https://investigacion.pucp.edu.pe/grupos/GI3P/',
+  },
+  {
+    source: '/images/logos/ipae.svg',
+    width: 151,
+    height: 56,
+    alternate: 'logo de ipae',
+    url: 'https://www.ipae.pe/',
+  },
+  {
+    source: '/images/logos/foro-educativo.svg',
+    width: 145,
+    height: 58,
+    alternate: 'logo de foro educativo',
+    url: 'http://foroeducativo.org/',
+  },
+  {
+    source: '/images/logos/proetica.svg',
+    width: 131,
+    height: 64,
+    alternate: 'logo de proética',
+    url: 'https://www.proetica.org.pe/',
+  },
+];
+
 const LogoList = () => (
   <Styled.Boxlogo>
-    <ImageBox>
-      <Image
-        src="/images/logos/open-politica.svg"
-        width="200"
-        height="43"
-        alt="logo de Open Política"
-      />
-    </ImageBox>
-    <ImageBox>
-      <Image
-        src="/images/logos/transparencia.svg"
-        width="130"
-        height="65"
-        alt="logo de Transparencia"
-      />
-    </ImageBox>
-    <ImageBox>
-      <Image
-        src="/images/logos/200.svg"
-        width="142"
-        height="59"
-        alt="logo de 200"
-      />
-    </ImageBox>
-    <ImageBox>
-      <Image
-        src="/images/logos/cpp.svg"
-        width="124"
-        height="68"
-        alt="logo de consejo de la prensa peruana"
-      />
-    </ImageBox>
-    <ImageBox>
-      <Image
-        src="/images/logos/UPCH.svg"
-        width="138"
-        height="61"
-        alt="logo de universidad peruana cayetano heredia"
-      />
-    </ImageBox>
-    <ImageBox>
-      <Image
-        src="/images/logos/logito_copia.svg"
-        width="131"
-        height="65"
-        alt="logo de impulso"
-      />
-    </ImageBox>
-    <ImageBox>
-      <Image
-        src="/images/logos/IBC.svg"
-        width="151"
-        height="56"
-        alt="logo de instituto bartolomé de las casas"
-      />
-    </ImageBox>
-    <ImageBox>
-      <Image
-        src="/images/logos/internancia.svg"
-        width="98"
-        height="98"
-        alt="logo de Internancia"
-      />
-    </ImageBox>
-    <ImageBox>
-      <Image
-        src="/images/logos/perspectiva.svg"
-        width="154"
-        height="56"
-        alt="logo de perspectiva constitucional"
-      />
-    </ImageBox>
-    <ImageBox>
-      <Image
-        src="/images/logos/cipca.svg"
-        width="81"
-        height="104"
-        alt="logo de cipca"
-      />
-    </ImageBox>
-    <ImageBox>
-      <Image
-        src="/images/logos/pucp.svg"
-        width="198"
-        height="43"
-        alt="logo de PUCP"
-      />
-    </ImageBox>
-    <ImageBox>
-      <Image
-        src="/images/logos/ipae.svg"
-        width="151"
-        height="56"
-        alt="logo de Ipae"
-      />
-    </ImageBox>
-    <ImageBox>
-      <Image
-        src="/images/logos/foro-educativo.svg"
-        width="145"
-        height="58"
-        alt="logo de Foro Educativo"
-      />
-    </ImageBox>
-    <ImageBox>
-      <Image
-        src="/images/logos/proetica.svg"
-        width="131"
-        height="64"
-        alt="logo de Proética"
-      />
-    </ImageBox>
+    {Logos.map(({ source, width, height, alternate, url }, i) => {
+      return (
+        <ImageBox key={i} to={url}>
+          <Image src={source} width={width} height={height} alt={alternate} />
+        </ImageBox>
+      );
+    })}
   </Styled.Boxlogo>
 );
 
@@ -213,7 +203,7 @@ export default function Home(props) {
           </Styled.ReportsContainer>
         </Styled.Reports>
         <Styled.Organizers>
-          Promotores
+          <Styled.OrganizersTitle>Promotores</Styled.OrganizersTitle>
           <LogoList />
         </Styled.Organizers>
       </BasePage>
