@@ -33,25 +33,24 @@ export const Subtitle = styled('p')`
   }
 `;
 
-export const Signatures = styled('div')`
-  background: #f2f2f2;
-  padding: 3.75rem 0;
+export const Reports = styled('div')`
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  margin: 0 2.5rem;
+  padding: 0;
   text-align: center;
+  @media (max-width: 75rem) {
+    margin: 0 1rem;
+    padding: 0 1.5rem;
+  }
 `;
 
-export const SignatureContainer = styled('div')`
+export const ReportsContainer = styled('div')`
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
   margin: 0 auto;
   max-width: 940px;
-`;
-
-export const CountText = styled('p')`
-  border-bottom: 1px solid #d9d9d9;
-  color: #4e4a49;
-  font-size: 2.5rem;
-  font-weight: bold;
-  line-height: 3.625rem;
-  margin: 0;
-  padding: 0 4.9375rem 2rem;
 `;
 
 export const Text = styled('p')`
@@ -69,6 +68,39 @@ export const TextLink = styled('a')`
   color: #292929;
 `;
 
+export const Info = styled('div')`
+  max-width: 632px;
+  padding-bottom: 3.5rem;
+  padding-top: 3.75rem;
+  @media (max-width: 75rem) {
+    max-width: 35rem;
+  }
+  @media (max-width: 58.75rem) {
+    max-width: none;
+  }
+`;
+
+export const PictureContainer = styled('div')`
+  position: relative;
+  width: 12.375rem;
+  @media (max-width: 75rem) {
+    flex-grow: 1;
+    width: 20rem;
+  }
+  @media (max-width: 58.75rem) {
+    display: none;
+  }
+`;
+export const Message = styled('div')`
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2.125rem;
+  padding-bottom: 1.25rem;
+  padding-right: 4.5rem;
+  text-align: left;
+`;
+
 export const Download = styled('div')`
   align-items: center;
   color: #292929;
@@ -83,6 +115,21 @@ export const Download = styled('div')`
 
 export const ImageDownload = styled('div')`
   padding-right: 1rem;
+`;
+
+export const ImagePortrait = styled('div')`
+  background: transparent;
+  border-radius: 4px;
+  box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+  height: 468px;
+  left: 0rem;
+  position: absolute;
+  top: -3.5rem;
+  width: 329px;
+  @media (max-width: 75rem) {
+    left: auto;
+    right: 0rem;
+  }
 `;
 
 export const Organizers = styled('div')`
@@ -154,4 +201,20 @@ export const AgreementTitle = styled(Title)`
   font-weight: bold;
   margin-bottom: 1.5rem;
   margin-top: 3rem;
+`;
+
+export const ButtonBox = styled('div')`
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  a {
+    margin-bottom: 1.25rem;
+    margin-right: 1.25rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 `;
