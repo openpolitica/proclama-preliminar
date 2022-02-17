@@ -101,6 +101,13 @@ const Logos = [
     alternate: 'logo de proética',
     url: 'https://www.proetica.org.pe/',
   },
+  {
+    source: '/images/logos/logo-recambio.png',
+    width: 151,
+    height: 31,
+    alternate: 'logo de recambio',
+    url: 'https://www.proetica.org.pe/',
+  },
 ];
 
 const LogoList = () => (
