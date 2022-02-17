@@ -31,9 +31,9 @@ const Logos = [
     url: 'http://consejoprensaperuana.org.pe/',
   },
   {
-    source: '/images/logos/UPCH.svg',
+    source: '/images/logos/innovalab.png',
     width: 138,
-    height: 61,
+    height: 55,
     alternate: 'logo de laboratorio de innovación en Salud - UPCH',
     url: 'https://investigacion.cayetano.edu.pe/catalogo/biotecnologia/innov-lab',
   },
@@ -45,9 +45,9 @@ const Logos = [
     url: 'https://impulsopais.pe/',
   },
   {
-    source: '/images/logos/IBC.svg',
+    source: '/images/logos/logo_cbc.png',
     width: 151,
-    height: 56,
+    height: 37,
     alternate: 'logo de centro bartolomé de las casas',
     url: 'https://cbc.org.pe/',
   },
@@ -73,7 +73,7 @@ const Logos = [
     url: 'http://www.cipca.org.pe/',
   },
   {
-    source: '/images/logos/pucp.svg',
+    source: '/images/logos/logo_pucp.png',
     width: 198,
     height: 43,
     alternate:
@@ -88,7 +88,7 @@ const Logos = [
     url: 'https://www.ipae.pe/',
   },
   {
-    source: '/images/logos/foro-educativo.svg',
+    source: '/images/logos/foro-educativo.png',
     width: 145,
     height: 58,
     alternate: 'logo de foro educativo',
