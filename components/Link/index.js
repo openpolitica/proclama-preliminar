@@ -1,4 +1,4 @@
-const Link = ({ to, children, ...props }) => {
+const Link = ({ to, children, header, ...props }) => {
   if (to) {
     return (
       <a href={to} target="_blank" rel="noopener noreferrer" {...props}>
