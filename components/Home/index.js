@@ -5,8 +5,8 @@ import BasePage from 'components/BasePage';
 import ImageBox from 'components/ImageBox';
 import MainContent from 'components/MainContent';
 import AgreementCard from 'components/AgreementCard';
-import SignatureCount from 'components/SignatureCount';
 import EventCard from 'components/EventCard';
+import DownloadButton from 'components/DownloadButton';
 
 const LogoList = () => (
   <Styled.Boxlogo>
@@ -184,30 +184,34 @@ export default function Home(props) {
             )}
           </Styled.EventList>
         </MainContent>
-        <Styled.Signatures>
-          <Styled.SignatureContainer>
-            <SignatureCount count={props.signatures} />
-            <Styled.Text>
-              Fuente:{' '}
-              <Styled.TextLink href="https://www.change.org/p/actransparencia-keikofujimori-pedrocastillote-canaln-que-los-candidatos-pedro-castillo-y-keiko-fujimori-firmen-la-siguiente-proclama-ciudadana">
-                change.org
-              </Styled.TextLink>
-            </Styled.Text>
-            <Styled.Download>
-              <Styled.ImageDownload>
+        <Styled.Reports>
+          <Styled.ReportsContainer>
+            <Styled.Info>
+              <Styled.Message>
+                Descarga nuestro informe sobre el seguimiento de los acuerdos en
+                los 120 días de gobierno del presidente Pedro Castillo.
+              </Styled.Message>
+              <Styled.ButtonBox>
+                <DownloadButton to="https://drive.google.com/uc?export=download&id=11o1y3Eed0q5QjWLVb0M6eaHO0e058EEJ">
+                  Descargar reporte completo
+                </DownloadButton>
+                <DownloadButton to="https://drive.google.com/uc?export=download&id=1K2mZ42uFlMieatGmScib4hTVv6M831vd">
+                  Descargar resumen ejecutivo
+                </DownloadButton>
+              </Styled.ButtonBox>
+            </Styled.Info>
+            <Styled.PictureContainer>
+              <Styled.ImagePortrait>
                 <Image
-                  src="/images/icons/download-icon.svg"
-                  width="24"
-                  height="24"
-                  alt="icono de descarga"
+                  src="/images/portrait.png"
+                  width="329"
+                  height="469"
+                  alt="informe de 120 días"
                 />
-              </Styled.ImageDownload>
-              <Styled.TextLink href="https://drive.google.com/drive/folders/1hFH0XfkHCktmDQkuuRXICPa_FgcsGaA_">
-                Descarga y comparte los compromisos
-              </Styled.TextLink>
-            </Styled.Download>
-          </Styled.SignatureContainer>
-        </Styled.Signatures>
+              </Styled.ImagePortrait>
+            </Styled.PictureContainer>
+          </Styled.ReportsContainer>
+        </Styled.Reports>
         <Styled.Organizers>
           Promotores
           <LogoList />
