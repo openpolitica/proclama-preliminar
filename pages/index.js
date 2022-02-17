@@ -52,8 +52,6 @@ export async function getServerSideProps() {
       };
     },
   );
-  console.log(agreementsCounters);
-  console.log(events);
   return {
     props: {
       agreements: JSON.parse(JSON.stringify(agreementsCounters)),
