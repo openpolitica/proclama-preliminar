@@ -49,6 +49,21 @@ export default class MyDocument extends Document {
           `,
             }}
           />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="128x128"
+            href="favicon/favicon.svg"
+          />
+          <link
+            href="https://api.fontshare.com/css?f[]=neco@400,500,700&display=swap"
+            rel="stylesheet"
+          />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+            rel="stylesheet"
+          />
           <SEO />
         </Head>
         <body>
