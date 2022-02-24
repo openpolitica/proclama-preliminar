@@ -1,4 +1,4 @@
-const Link = ({ to, children, header, ...props }) => {
+const LinkWithFallback = ({ to, children, header, ...props }) => {
   if (to) {
     return (
       <a href={to} target="_blank" rel="noopener noreferrer" {...props}>
@@ -9,4 +9,4 @@ const Link = ({ to, children, header, ...props }) => {
   return <div {...props}>{children}</div>;
 };
 
-export default Link;
+export default LinkWithFallback;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import Link from 'components/Link';
+import LinkWithFallback from 'components/LinkWithFallback';
 
-export const ImageBox = styled(Link)`
+export const ImageBox = styled(LinkWithFallback)`
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   padding: 0.5rem 0;

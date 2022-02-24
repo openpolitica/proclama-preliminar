@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import AlertBase from 'components/Alert';
 import ArrowRightIcon from 'public/images/icons/arrow-right.svg';
-import Link from 'components/Link';
+import LinkWithFallback from 'components/LinkWithFallback';
 import HeaderCard from 'components/HeaderCard';
 import { Date } from 'components/EventCard/styles';
 
@@ -37,7 +37,7 @@ const Description = styled('p')`
   padding-bottom: ${props => (props.underline ? 1 : 0)}rem;
 `;
 
-const Source = styled(Link)`
+const Source = styled(LinkWithFallback)`
   color: #4d4d4d;
   display: flex;
   font-family: Inter;
