@@ -10,11 +10,7 @@ export default function AgreementCard({ id, title, statuses }) {
         {statuses.map(({ status, count }, i) => {
           if (status !== 'null') {
             return (
-              <Styled.StyledCounterAlert
-                key={i}
-                status={status}
-                count={count}
-              />
+              <Styled.CounterAlert key={i} status={status} count={count} />
             );
           }
           return null;

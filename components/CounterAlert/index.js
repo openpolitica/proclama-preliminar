@@ -3,8 +3,7 @@ import { statusLabel } from 'components/Alert';
 import { pluralizeAndCount, pluralize } from 'util/pluralize';
 import EyeIcon from 'components/EyeIcon';
 
-export default function CounterAlert({ status, count, ...props }) {
-  status = status ? status : 'null';
+export default function CounterAlert({ status = 'null', count, ...props }) {
   const label =
     status === 'null'
       ? statusLabel[status].toLowerCase()
