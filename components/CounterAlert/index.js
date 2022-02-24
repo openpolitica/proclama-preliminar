@@ -4,10 +4,10 @@ import { pluralizeAndCount, pluralize } from 'util/pluralize';
 import EyeIcon from 'components/EyeIcon';
 
 export default function CounterAlert({ status, count, ...props }) {
-  let label = statusLabel[status].toLowerCase();
-  label =
+  status = status ? status : 'null';
+  const label =
     status === 'null'
-      ? label
+      ? statusLabel[status].toLowerCase()
       : statusLabel[status].split(' ').slice(1).join(' ');
 
   const Content = () => {

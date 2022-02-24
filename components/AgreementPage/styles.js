@@ -45,7 +45,7 @@ export const PrevButton = styled(NavButton)`
   transform: matrix(-1, 0, 0, 1, 0, 0);
 `;
 
-export const NextButton = styled(NavButton)``;
+export const NextButton = NavButton;
 
 export const Counter = styled('p')`
   color: rgba(0, 0, 0, 0.8);
