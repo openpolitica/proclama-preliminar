@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import CounterAlert from 'components/CounterAlert';
+import CounterAlertBase from 'components/CounterAlert';
 
 const Card = styled('div')`
   background: #ffffff;
@@ -53,15 +53,15 @@ const SeeMore = styled('button')`
   z-index: 1;
 `;
 
-const StyledCounterAlert = styled(CounterAlert)`
+const CounterAlert = styled(CounterAlertBase)`
   padding: 0.5rem 0;
 `;
 
 const Counterbox = styled('div')`
-  ${StyledCounterAlert} + ${StyledCounterAlert} {
+  ${CounterAlert} + ${CounterAlert} {
     margin-bottom: 0.25rem;
     margin-top: 0.25rem;
   }
 `;
 
-export { Card, Counterbox, Title, Number, SeeMore, StyledCounterAlert };
+export { Card, Counterbox, Title, Number, SeeMore, CounterAlert };
