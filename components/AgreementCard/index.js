@@ -1,6 +1,5 @@
 import * as Styled from './styles';
 import Link from 'next/link';
-import CounterAlert from 'components/CounterAlert';
 
 export default function AgreementCard({ id, title, statuses }) {
   return (
@@ -10,8 +9,15 @@ export default function AgreementCard({ id, title, statuses }) {
       <Styled.Counterbox>
         {statuses.map(({ status, count }, i) => {
           if (status !== 'null') {
-            return <CounterAlert key={i} status={status} count={count} />;
+            return (
+              <Styled.StyledCounterAlert
+                key={i}
+                status={status}
+                count={count}
+              />
+            );
           }
+          return null;
         })}
       </Styled.Counterbox>
       <Link href={`compromiso/${id}`}>

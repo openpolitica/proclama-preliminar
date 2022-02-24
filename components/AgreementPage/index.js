@@ -1,12 +1,12 @@
 import * as Styled from './styles';
-import React from 'react';
+import { useEffect } from 'react';
 import Router from 'next/router';
 import ErrorPage from 'next/error';
 import BasePage from 'components/BasePage';
 import IndicatorCard from 'components/IndicatorCard';
 
 export default function Agreement(props) {
-  React.useEffect(() => {
+  useEffect(() => {
     if (!props.page) {
       Router.push('/');
     }
@@ -36,8 +36,7 @@ export default function Agreement(props) {
           />
         </Styled.TitleBox>
         <Styled.Counter>
-          <strong>Número de indicadores:</strong> {}
-          {props.indicatorsCount}
+          <strong>Número de indicadores:</strong> {props.indicatorsCount}
         </Styled.Counter>
         <Styled.IndicatorList>
           {info?.indicators.map(

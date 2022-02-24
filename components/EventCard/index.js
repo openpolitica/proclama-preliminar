@@ -9,7 +9,7 @@ const limitCharacters = (text, max) => {
     return text;
   }
   const limitedText = text.substring(0, max);
-  return `${limitedText.substring(0, limitedText.lastIndexOf(' '))}...`;
+  return `${limitedText.substring(0, limitedText.lastIndexOf(' '))}…`;
 };
 
 export default function EventCard({
