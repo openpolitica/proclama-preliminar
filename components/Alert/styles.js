@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const statusColor = {
-  null: {
+  stateless: {
     color: 'rgba(0, 0, 0, 0.92)',
     bg: 'rgba(0, 0, 0, 0.08)',
     border: 'transparent',
@@ -34,10 +34,10 @@ const statusColor = {
 const Message = styled('div')`
   align-items: center;
   background-color: ${({ status }) =>
-    status ? statusColor[status].bg : statusColor['null'].bg};
+    status ? statusColor[status].bg : statusColor['stateless'].bg};
   border-radius: 0.25rem;
   color: ${({ status }) =>
-    status ? statusColor[status].color : statusColor['null'].color};
+    status ? statusColor[status].color : statusColor['stateless'].color};
   display: flex;
   font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
@@ -54,7 +54,7 @@ const Message = styled('div')`
     fill: ${({ status }) =>
       status
         ? statusColor[status].eyeNegative
-        : statusColor['null'].eyeNegative};
+        : statusColor['stateless'].eyeNegative};
   }
 `;
 

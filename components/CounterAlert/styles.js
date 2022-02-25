@@ -11,6 +11,6 @@ export const Container = styled('div')`
 
   div > svg > path {
     fill: ${({ status }) =>
-      status ? statusColor[status].eye : statusColor['null'].eye};
+      status ? statusColor[status].eye : statusColor['stateless'].eye};
   }
 `;

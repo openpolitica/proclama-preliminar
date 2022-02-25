@@ -1,30 +1,13 @@
 import Home from 'components/Home';
 import { getAgreements, getStatusCounters } from 'pages/api/agreements';
 import { getLastEvents } from 'pages/api/events';
+import { getStatus } from 'pages/api/status';
 
 export async function getServerSideProps() {
   const agreements = await getAgreements();
   const events = await getLastEvents(3);
   const counters = await getStatusCounters();
-
-  const status = [
-    {
-      id: 'null',
-      order: 0,
-    },
-    {
-      id: 'moderate',
-      order: 1,
-    },
-    {
-      id: 'high',
-      order: 2,
-    },
-    {
-      id: 'extreme',
-      order: 3,
-    },
-  ];
+  const status = await getStatus();
 
   const agreementsCounters = agreements.map(
     ({ id, title, description, _id }) => {
