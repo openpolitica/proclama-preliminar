@@ -80,7 +80,7 @@ export const getStatusCounters = async () => {
             if: {
               $eq: ['$last_status', null],
             },
-            then: 'null',
+            then: 'stateless',
             else: '$last_status',
           },
         },

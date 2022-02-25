@@ -3,14 +3,18 @@ import { statusLabel } from 'components/Alert';
 import { pluralizeAndCount, pluralize } from 'util/pluralize';
 import EyeIcon from 'components/EyeIcon';
 
-export default function CounterAlert({ status = 'null', count, ...props }) {
+export default function CounterAlert({
+  status = 'stateless',
+  count,
+  ...props
+}) {
   const label =
-    status === 'null'
+    status === 'stateless'
       ? statusLabel[status].toLowerCase()
       : statusLabel[status].split(' ').slice(1).join(' ');
 
   const Content = () => {
-    if (status !== 'null') {
+    if (status !== 'stateless') {
       return (
         <div>
           <strong>{pluralizeAndCount(count, 'alerta')} </strong>

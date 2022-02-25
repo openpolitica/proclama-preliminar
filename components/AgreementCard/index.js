@@ -8,7 +8,7 @@ export default function AgreementCard({ id, title, statuses }) {
       <Styled.Title>{title}</Styled.Title>
       <Styled.Counterbox>
         {statuses.map(({ status, count }, i) => {
-          if (status !== 'null') {
+          if (status !== 'stateless') {
             return (
               <Styled.CounterAlert key={i} status={status} count={count} />
             );
