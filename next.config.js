@@ -8,6 +8,12 @@ module.exports = {
       },
     ];
   },
+  env: {
+    hotjar: {
+      id: 2857302,
+      version: 6,
+    },
+  },
   webpack(config, { isServer }) {
     if (isServer) {
       require('./scripts/optimize-svg');

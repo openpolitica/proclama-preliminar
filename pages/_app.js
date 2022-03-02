@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import theme from 'global-styles/theme';
 import GlobalStyle from 'global-styles/global';
 import Head from 'next/head';
+import useHotjar from 'react-use-hotjar';
 import * as gtag from 'lib/gtag';
 
 function MyOPApp({ Component, pageProps }) {
@@ -37,4 +38,24 @@ MyOPApp.propTypes = {
   pageProps: PropTypes.object,
 };
 
-export default MyOPApp;
+const logger = value =>
+  console.info(`%c${value}`, 'background: #222; color: #bada55');
+
+const withHotjar = Component => props => {
+  const { initHotjar } = useHotjar();
+
+  useEffect(() => {
+    initHotjar(
+      process.env.hotjar.id,
+      process.env.hotjar.version,
+      false,
+      logger,
+    );
+  }, [initHotjar]);
+
+  return <Component {...props} />;
+};
+
+export default process.env.NEXT_PUBLIC_ENVIRONMENT === 'local'
+  ? MyOPApp
+  : withHotjar(MyOPApp);
