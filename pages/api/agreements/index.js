@@ -25,6 +25,11 @@ export const getAgreementByID = async id => {
     path: 'indicators',
     populate: {
       path: 'events',
+      options: {
+        sort: {
+          created_At: -1,
+        },
+      },
     },
   });
 };
