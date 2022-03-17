@@ -10,7 +10,7 @@ const Header = () => {
         <Styled.Header>
           <ImageBox header>
             <Image
-              src="/images/logos/vigilantes.png"
+              src="/images/logos/vigilantes.svg"
               width="208px"
               height="48px"
               quality="100"
