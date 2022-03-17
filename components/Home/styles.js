@@ -99,6 +99,9 @@ export const Message = styled('div')`
   padding-bottom: 1.25rem;
   padding-right: 4.5rem;
   text-align: left;
+  @media (max-width: 58.75rem) {
+    padding-right: 0;
+  }
 `;
 
 export const Download = styled('div')`

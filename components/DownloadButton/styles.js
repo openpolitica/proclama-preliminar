@@ -31,4 +31,5 @@ export const ArrowRight = styled(ArrowIcon)`
 `;
 export const Text = styled('span')`
   padding-left: 0.5rem;
+  text-align: left;
 `;
