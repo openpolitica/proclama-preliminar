@@ -4,7 +4,7 @@ export default function SEO() {
   const meta = {
     title: 'Vigilantes.pe',
     description:
-      '12 compromisos esenciales que asumió el presidente Pedro Castillo. Promovido por la Asociación Civil Transparencia.',
+      '12 compromisos esenciales para la democracia y el desarrollo. Promovido por la Asociación Civil Transparencia.',
     image: 'https://vigilantes.pe/images/banner.png',
     type: 'website',
   };
