@@ -131,8 +131,8 @@ export default function Home(props) {
       <BasePage>
         <MainContent>
           <Styled.Title>
-            <Styled.Emphasis>12 compromisos</Styled.Emphasis> esenciales que
-            asumió el presidente Pedro Castillo
+            <Styled.Emphasis>12 compromisos</Styled.Emphasis> esenciales para la
+            democracia y el desarrollo
           </Styled.Title>
           <Styled.Subtitle>
             Conoce y hazle seguimiento a los 12 compromisos y sus indicadores
