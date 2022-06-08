@@ -189,8 +189,8 @@ export default function Home(props) {
                 los 120 días de gobierno del presidente Pedro Castillo.
               </Styled.Message>
               <Styled.ButtonBox>
-                <DownloadButton to="https://drive.google.com/uc?export=download&id=1WYELUPQyfQmjLJbstlzSPCoD0nlr8_sH">
-                  Descargar reporte Marzo 2022
+                <DownloadButton to="https://drive.google.com/uc?export=download&id=1ETkt9UjBL6IDLpZc1aT2W4FsxrQ_TEsH">
+                  Descargar reporte Mayo 2022
                 </DownloadButton>
                 <DownloadButton to="https://drive.google.com/uc?export=download&id=11o1y3Eed0q5QjWLVb0M6eaHO0e058EEJ">
                   Descargar reporte Diciembre 2021
