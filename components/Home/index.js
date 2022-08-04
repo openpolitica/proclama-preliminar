@@ -7,6 +7,7 @@ import MainContent from 'components/MainContent';
 import AgreementCard from 'components/AgreementCard';
 import EventCard from 'components/EventCard';
 import DownloadButton from 'components/DownloadButton';
+import Link from 'components/LinkWithFallback';
 
 const Logos = [
   {
@@ -125,6 +126,7 @@ const LogoList = () => (
 export default function Home(props) {
   const agreements = props.agreements;
   const events = props.events?.slice(0, 3);
+  const lastReport = props.lastReport;
 
   return (
     <Fragment>
@@ -189,21 +191,25 @@ export default function Home(props) {
                 los 120 días de gobierno del presidente Pedro Castillo.
               </Styled.Message>
               <Styled.ButtonBox>
-                <DownloadButton to="https://drive.google.com/uc?export=download&id=1ETkt9UjBL6IDLpZc1aT2W4FsxrQ_TEsH">
-                  Descargar reporte Mayo 2022
-                </DownloadButton>
-                <DownloadButton to="https://drive.google.com/uc?export=download&id=11o1y3Eed0q5QjWLVb0M6eaHO0e058EEJ">
-                  Descargar reporte Diciembre 2021
+                <DownloadButton to={lastReport?.url}>
+                  Descargar reporte {lastReport?.title}
                 </DownloadButton>
               </Styled.ButtonBox>
+              <Styled.LinkBox>
+                <Link to="reportes/" target="_self">
+                  <Styled.DownloadAll>
+                    Ver todos los reportes
+                  </Styled.DownloadAll>
+                </Link>
+              </Styled.LinkBox>
             </Styled.Info>
             <Styled.PictureContainer>
               <Styled.ImagePortrait>
                 <Image
-                  src="/images/portrait.png"
-                  width="329"
-                  height="469"
-                  alt="informe de 120 días"
+                  src="/images/icons/img_report_big.svg"
+                  width="390"
+                  height="283"
+                  alt="ícono de informe"
                 />
               </Styled.ImagePortrait>
             </Styled.PictureContainer>

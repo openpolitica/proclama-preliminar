@@ -30,6 +30,7 @@ export const ArrowRight = styled(ArrowIcon)`
   width: 0.875rem;
 `;
 export const Text = styled('span')`
+  font-family: 'Inter';
   padding-left: 0.5rem;
   text-align: left;
 `;
