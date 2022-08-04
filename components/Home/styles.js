@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Masonry from 'react-masonry-css';
+import { SeeMore } from 'components/AgreementCard/styles';
 
 export const Title = styled('h1')`
   color: rgba(0, 0, 0, 0.92);
@@ -12,6 +13,10 @@ export const Title = styled('h1')`
     font-size: 1.5rem;
     line-height: 2rem;
   }
+`;
+
+export const LinkBox = styled('div')`
+  text-align: left;
 `;
 
 export const Emphasis = styled('span')`
@@ -43,6 +48,13 @@ export const Reports = styled('div')`
     margin: 0 1rem;
     padding: 0 1.5rem;
   }
+`;
+
+export const DownloadAll = styled(SeeMore)`
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 400;
+  position: static;
 `;
 
 export const ReportsContainer = styled('div')`
@@ -82,7 +94,7 @@ export const Info = styled('div')`
 
 export const PictureContainer = styled('div')`
   position: relative;
-  width: 12.375rem;
+  width: 18rem;
   @media (max-width: 75rem) {
     flex-grow: 1;
     width: 20rem;
@@ -123,12 +135,11 @@ export const ImageDownload = styled('div')`
 export const ImagePortrait = styled('div')`
   background: transparent;
   border-radius: 4px;
-  box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
-  height: 468px;
+  bottom: 0;
+  height: 283px;
   left: 0rem;
   position: absolute;
-  top: -3.5rem;
-  width: 329px;
+  width: 390px;
   @media (max-width: 75rem) {
     left: auto;
     right: 0rem;
@@ -155,18 +166,6 @@ export const OrganizersTitle = styled('h1')`
   line-height: 2rem;
   margin-bottom: 1.5rem;
   text-align: center;
-`;
-
-export const Boxlogo = styled('div')`
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 1.5rem;
-  @media (max-width: 37.5rem) {
-    flex-direction: column;
-    margin-top: 2.5rem;
-  }
 `;
 
 export const LogoText = styled('p')`

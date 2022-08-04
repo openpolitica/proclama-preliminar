@@ -2,6 +2,7 @@ import Home from 'components/Home';
 import { getAgreements, getStatusCounters } from 'pages/api/agreements';
 import { getLastEvents } from 'pages/api/events';
 import { getStatus } from 'pages/api/status';
+import reports from '_data/reports';
 
 export async function getServerSideProps() {
   const agreements = await getAgreements();
@@ -39,6 +40,7 @@ export async function getServerSideProps() {
     props: {
       agreements: JSON.parse(JSON.stringify(agreementsCounters)),
       events: JSON.parse(JSON.stringify(events)),
+      lastReport: reports.reverse()[0],
     },
   };
 }
