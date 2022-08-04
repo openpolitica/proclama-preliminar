@@ -2,126 +2,12 @@ import * as Styled from './styles';
 import { Fragment } from 'react';
 import Image from 'next/image';
 import BasePage from 'components/BasePage';
-import ImageBox from 'components/ImageBox';
 import MainContent from 'components/MainContent';
 import AgreementCard from 'components/AgreementCard';
 import EventCard from 'components/EventCard';
 import DownloadButton from 'components/DownloadButton';
 import Link from 'components/LinkWithFallback';
-
-const Logos = [
-  {
-    source: '/images/logos/open-politica.svg',
-    width: 200,
-    height: 43,
-    alternate: 'logo de Open Política',
-    url: 'https://openpolitica.com/',
-  },
-  {
-    source: '/images/logos/transparencia.svg',
-    width: 130,
-    height: 65,
-    alternate: 'logo de Transparencia',
-    url: 'https://www.transparencia.org.pe/',
-  },
-  {
-    source: '/images/logos/cpp.svg',
-    width: 124,
-    height: 68,
-    alternate: 'logo de consejo de la prensa peruana',
-    url: 'http://consejoprensaperuana.org.pe/',
-  },
-  {
-    source: '/images/logos/innovalab.png',
-    width: 138,
-    height: 55,
-    alternate: 'logo de laboratorio de innovación en Salud - UPCH',
-    url: 'https://investigacion.cayetano.edu.pe/catalogo/biotecnologia/innov-lab',
-  },
-  {
-    source: '/images/logos/logito_copia.svg',
-    width: 131,
-    height: 65,
-    alternate: 'logo de impulso país',
-    url: 'https://impulsopais.pe/',
-  },
-  {
-    source: '/images/logos/logo_cbc.png',
-    width: 151,
-    height: 37,
-    alternate: 'logo de centro bartolomé de las casas',
-    url: 'https://cbc.org.pe/',
-  },
-  {
-    source: '/images/logos/internancia.svg',
-    width: 98,
-    height: 98,
-    alternate: 'logo de Internancia',
-    url: 'https://www.facebook.com/internacia.pucp/',
-  },
-  {
-    source: '/images/logos/perspectiva.svg',
-    width: 154,
-    height: 56,
-    alternate: 'logo de perspectiva constitucional',
-    url: 'https://www.facebook.com/Perspectiva-Constitucional-851877291597271/',
-  },
-  {
-    source: '/images/logos/cipca.svg',
-    width: 81,
-    height: 104,
-    alternate: 'logo de cipca',
-    url: 'http://www.cipca.org.pe/',
-  },
-  {
-    source: '/images/logos/logo_pucp.png',
-    width: 198,
-    height: 43,
-    alternate:
-      'logo de grupo interdisciplinado de prospectiva de políticas públicas de la pucp',
-    url: 'https://investigacion.pucp.edu.pe/grupos/GI3P/',
-  },
-  {
-    source: '/images/logos/ipae.svg',
-    width: 151,
-    height: 56,
-    alternate: 'logo de ipae',
-    url: 'https://www.ipae.pe/',
-  },
-  {
-    source: '/images/logos/foro-educativo.png',
-    width: 145,
-    height: 58,
-    alternate: 'logo de foro educativo',
-    url: 'http://foroeducativo.org/',
-  },
-  {
-    source: '/images/logos/proetica.svg',
-    width: 131,
-    height: 64,
-    alternate: 'logo de proética',
-    url: 'https://www.proetica.org.pe/',
-  },
-  {
-    source: '/images/logos/logo-recambio.png',
-    width: 151,
-    height: 31,
-    alternate: 'logo de recambio',
-    url: 'https://www.proetica.org.pe/',
-  },
-];
-
-const LogoList = () => (
-  <Styled.Boxlogo>
-    {Logos.map(({ source, width, height, alternate, url }, i) => {
-      return (
-        <ImageBox key={i} to={url}>
-          <Image src={source} width={width} height={height} alt={alternate} />
-        </ImageBox>
-      );
-    })}
-  </Styled.Boxlogo>
-);
+import LogoList from 'components/LogoList';
 
 export default function Home(props) {
   const agreements = props.agreements;

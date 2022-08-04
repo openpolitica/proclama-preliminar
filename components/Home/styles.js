@@ -168,18 +168,6 @@ export const OrganizersTitle = styled('h1')`
   text-align: center;
 `;
 
-export const Boxlogo = styled('div')`
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 1.5rem;
-  @media (max-width: 37.5rem) {
-    flex-direction: column;
-    margin-top: 2.5rem;
-  }
-`;
-
 export const LogoText = styled('p')`
   color: #656565;
   font-size: 1.75rem;
