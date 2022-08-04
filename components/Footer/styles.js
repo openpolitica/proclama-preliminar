@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import OpenLogo from 'public/images/logos/open-politica.svg';
+import BrotLogoBase from 'public/images/logos/pan-para-el-mundo.svg';
+import SeparatorBase from 'public/images/icons/separator.svg';
 
 export const Footer = styled('footer')`
   align-items: center;
@@ -13,7 +15,17 @@ export const Footer = styled('footer')`
   padding: 3.75rem 0;
   text-align: center;
   @media (max-width: 37.5rem) {
-    padding: 3.75rem 0;
+    padding: 2.75rem 0;
+    flex-direction: column;
+  }
+`;
+
+export const Container = styled('div')`
+  align-items: center;
+  display: flex;
+  margin: 0 2rem;
+  @media (max-width: 37.5rem) {
+    padding: 1rem 0;
   }
 `;
 
@@ -26,4 +38,15 @@ export const TextLink = styled('a')`
 export const OPLogo = styled(OpenLogo)`
   height: 28px;
   width: 132px;
+`;
+
+export const BrotLogo = styled(BrotLogoBase)`
+  height: 32px;
+  width: 62px;
+`;
+
+export const Separator = styled(SeparatorBase)`
+  @media (max-width: 37.5rem) {
+    display: none;
+  }
 `;
